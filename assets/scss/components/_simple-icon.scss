@@ -1,0 +1,18 @@
+/*======= Simple Icon =======*/
+.simple-icon {
+    .icon {
+        font-size: 70px;
+        line-height: 0.5;
+        color: $color-secondary;
+        margin-bottom: 25px;
+    }
+
+    .title {
+        font: {
+            size: 22px;
+            weight: 500;
+        }
+        line-height: 1.4;
+        margin-bottom: 12px;
+    }
+}

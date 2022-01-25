@@ -1,0 +1,107 @@
+/*======= Counter Items =======*/
+.counter-item {
+    .icon {
+        line-height: 0.5;
+        font-size: 75px;
+        margin-bottom: 30px;
+    }
+
+    .counter-wrap {
+        display: flex;
+        align-items: center;
+        font: {
+            size: 65px;
+            weight: 400;
+            family: $font-lora;
+        }
+        line-height: 1;
+        color: $color-primary;
+        margin-bottom: 10px;
+
+        @include respond-below(xl) {
+            font-size: 52px;
+        }
+
+        @include respond-below(md) {
+            font-size: 38px;
+        }
+    }
+
+    .title {
+        font: {
+            size: 16px;
+            family: $font-inter;
+            weight: 400;
+        }
+        line-height: 1.45;
+        color: $color-body;
+
+        @include respond-below(md) {
+            font-size: 15px;
+        }
+    }
+
+    &.counter-white {
+        .icon,
+        .counter-wrap,
+        .title {
+            color: $color-white;
+        }
+    }
+}
+
+.counter-inner {
+    border: 1px solid $color-primary-10;
+    padding: 50px 65px 10px;
+
+    @include respond-below(xl) {
+        padding: 50px 45px 10px;
+    }
+
+    @include respond-below(sm) {
+        padding: 50px 30px 10px;
+    }
+
+    .counter-item {
+        margin-bottom: 40px;
+    }
+}
+
+.counter-inner-two {
+    padding: 80px 0 40px;
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: -115px;
+        right: -115px;
+        top: 0;
+        height: 100%;
+        background-color: $color-secondary;
+    }
+
+    .counter-item {
+        margin-bottom: 40px;
+    }
+
+    &.mb-negative {
+        margin-bottom: -60px;
+        z-index: 2;
+    }
+}
+
+.counter-inner-three {
+    padding: 60px 70px 20px;
+    position: relative;
+    z-index: 1;
+
+    @include respond-below(md) {
+        padding: 60px 50px 20px;
+    }
+
+    .counter-item {
+        margin-bottom: 40px;
+    }
+}

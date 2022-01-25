@@ -1,0 +1,318 @@
+/*======= Footer =======*/
+.template-footer {
+    position: relative;
+    z-index: 1;
+
+    .footer-widgets {
+        padding-top: 80px;
+        padding-bottom: 30px;
+
+        .widget {
+            margin-bottom: 50px;
+
+            &,
+            a {
+                color: $color-body;
+            }
+
+            a:hover {
+                color: $color-secondary;
+            }
+
+            &-title {
+                font: {
+                    size: 24px;
+                    weight: 500;
+                }
+                margin-bottom: 35px;
+
+                @include respond-below(lg) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .footer-logo {
+                margin-bottom: 20px;
+            }
+
+            &.instagram-widget .widget-title {
+                margin-bottom: 45px;
+
+                @include respond-below(lg) {
+                    margin-bottom: 40px;
+                }
+
+                @include respond-below(md) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            &.text-widget {
+                @include respond-above(xl) {
+                    margin-right: 40px;
+                }
+
+                .contact-list {
+                    margin-top: 25px;
+
+                    li {
+                        font: {
+                            size: 18px;
+                            family: $font-lora;
+                        }
+                        line-height: 1.4;
+
+                        i {
+                            color: $color-secondary;
+                            font-size: 20px;
+                            margin-right: 12px;
+                        }
+
+                        &:not(:last-child) {
+                            margin-bottom: 15px;
+                        }
+                    }
+                }
+            }
+
+            .nav-links {
+                li {
+                    line-height: 1.5;
+
+                    &:not(:last-child) {
+                        margin-bottom: 18px;
+                    }
+                }
+            }
+
+            .instagram-images {
+                display: flex;
+                flex-wrap: wrap;
+                margin: -5px;
+
+                .single-image {
+                    position: relative;
+                    z-index: 1;
+                    margin: 5px;
+
+                    a {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        z-index: 2;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        color: $color-white;
+                        font-size: 24px;
+
+                        &::before {
+                            @extend %pseudo-before-100;
+                            background-color: $color-heading;
+                            opacity: 0;
+                            visibility: hidden;
+                            transition: all 0.4s;
+                        }
+
+                        i {
+                            transform: scale(0);
+                            visibility: hidden;
+                            transition: all 0.4s;
+                        }
+                    }
+
+                    &:hover {
+                        a {
+                            i {
+                                transform: scale(1);
+                                visibility: visible;
+                            }
+
+                            &::before {
+                                opacity: 0.9;
+                                visibility: visible;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .newsletters-form {
+                margin-top: 25px;
+                position: relative;
+
+                input[type="email"] {
+                    width: 100%;
+                    height: 60px;
+                    border: none;
+                    background-color: $color-primary;
+                    color: $color-white;
+                    font: {
+                        size: 16px;
+                        family: $font-inter;
+                        weight: 400;
+                    }
+                    border-radius: 30px;
+                    padding: 0 50px 0 25px;
+                }
+
+                button[type="submit"] {
+                    position: absolute;
+                    right: 25px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    background-color: transparent;
+                    color: $color-white;
+                    border: none;
+                    font-size: 20px;
+                }
+            }
+
+            .opening-notice {
+                line-height: 1.5;
+
+                h6 {
+                    font-size: 18px;
+                    font-weight: 600;
+                    margin-bottom: 10px;
+
+                    i {
+                        margin-right: 8px;
+                        color: $color-tertiary;
+                    }
+                }
+            }
+        }
+    }
+
+    .copyright-area {
+        text-align: center;
+        line-height: 1.6;
+        padding: 25px 0;
+        border-top: 1px solid $color-primary-10;
+    }
+
+    &-white {
+        .footer-widgets {
+            .widget {
+                &,
+                a,
+                &-title {
+                    color: $color-white;
+                }
+
+                a:hover {
+                    color: $color-white;
+                }
+
+                .newsletters-form {
+                    margin-top: 25px;
+                    position: relative;
+
+                    input[type="email"] {
+                        background-color: transparent;
+                        border: 1px solid $color-white;
+                    }
+
+                    button[type="submit"] {
+                        color: $color-white;
+                    }
+                }
+
+                .opening-notice {
+                    &,
+                    h6,
+                    h6 i {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        .copyright-area {
+            border-top: 1px solid rgba(#fff, 0.1);
+
+            &,
+            a {
+                color: $color-white;
+            }
+        }
+    }
+
+    &.template-hover-tertiary {
+        .footer-widgets {
+            .widget {
+                a:hover {
+                    color: $color-tertiary;
+                }
+
+                .opening-notice {
+                    h6 i {
+                        color: $color-tertiary;
+                    }
+                }
+
+                &.text-widget .contact-list li i {
+                    color: $color-tertiary;
+                }
+            }
+        }
+    }
+
+    &.have-cta-boxed-one {
+        .cta-boxed-one {
+            margin-bottom: -200px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .footer-inner {
+            padding-top: 200px;
+        }
+    }
+
+    &.have-cta-boxes-two {
+        .cta-boxes-wrapper {
+            position: relative;
+            z-index: 2;
+            margin-bottom: -150px;
+        }
+
+        .footer-inner {
+            padding-top: 120px;
+        }
+    }
+}
+
+.back-to-top {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    height: 45px;
+    width: 45px;
+    display: block;
+    border-radius: 50%;
+    z-index: 99;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: all 200ms linear;
+    border: 1px solid $color-heading;
+    background-color: $color-heading;
+    color: $color-white;
+    font-size: 18px;
+    text-align: center;
+    line-height: 43px;
+
+    &.active {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    &:hover {
+        color: $color-white;
+    }
+}

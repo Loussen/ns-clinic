@@ -1,0 +1,126 @@
+/*======= Comment Template =======*/
+.comment-template {
+    .template-title {
+        font: {
+            size: 24px;
+            weight: 600;
+        }
+        margin-bottom: 35px;
+    }
+
+    .comment-list {
+        li {
+            &:not(:last-child) {
+                margin-bottom: 50px;
+            }
+
+            .comment {
+                &-body {
+                    display: flex;
+                    align-items: center;
+
+                    @include respond-below(md) {
+                        flex-direction: column;
+                        align-items: flex-start;
+                    }
+                }
+
+                &-avatar {
+                    flex: 0 0 100px;
+                    margin-right: 30px;
+
+                    @include respond-below(md) {
+                        margin-right: 0;
+                        margin-bottom: 30px;
+                    }
+
+                    img {
+                        height: 100px;
+                        width: 100px;
+                        border-radius: 50%;
+                    }
+                }
+
+                &-content {
+                    position: relative;
+
+                    .name {
+                        font: {
+                            size: 18px;
+                            weight: 600;
+                        }
+                        margin-bottom: 8px;
+                    }
+
+                    .reply-link {
+                        font: {
+                            size: 14px;
+                            weight: 600;
+                        }
+                        line-height: 1;
+                        text-transform: uppercase;
+                        color: $color-heading;
+
+                        i {
+                            margin-left: 5px;
+                        }
+
+                        &:hover {
+                            color: $color-secondary;
+                        }
+                    }
+
+                    .date {
+                        position: absolute;
+                        right: 0;
+                        top: 3px;
+                        font-size: 15px;
+                        line-height: 1;
+
+                        @include respond-below(sm) {
+                            position: unset;
+                        }
+                    }
+                }
+            }
+
+            .children {
+                margin-left: 60px;
+
+                @include respond-below(sm) {
+                    margin-left: 30px;
+                }
+
+                li {
+                    &:first-child {
+                        margin-top: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .comment-form {
+        input,
+        textarea {
+            border-width: 2px;
+            height: 55px;
+            font: {
+                size: 16px;
+                family: $font-lora;
+                weight: 500;
+            }
+            color: $color-heading;
+            padding: 0 25px;
+
+            &:focus {
+                background-color: $color-white;
+            }
+        }
+
+        textarea {
+            padding-top: 15px;
+            height: 140px;
+        }
+    }
+}

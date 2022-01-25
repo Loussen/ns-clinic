@@ -1,0 +1,178 @@
+/*======= Fancy Content Box =======*/
+.fancy-content-box {
+    position: relative;
+
+    .box {
+        &-thumbnail {
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                transition: 0.3s;
+            }
+        }
+
+        &-content {
+            position: relative;
+            background-color: $color-white;
+            box-shadow: 0px 10px 60px 0px rgba(73, 154, 250, 0.1);
+            padding: 40px 35px;
+
+            @include respond-between(xl, c1400) {
+                padding: 40px 25px;
+                font-size: 14px;
+            }
+
+            @include respond-below(md) {
+                padding: 40px 30px;
+            }
+
+            .title {
+                font: {
+                    size: 22px;
+                    weight: 500;
+                }
+                margin-bottom: 10px;
+            }
+
+            .box-btn {
+                font: {
+                    size: 15px;
+                    weight: 700;
+                }
+                color: $color-heading;
+                line-height: 1;
+                background-color: $color-secondary-10;
+                padding: 15px 26px;
+                border-radius: 30px;
+                margin-top: 20px;
+
+                @include respond-between(xl, c1400) {
+                    padding: 15px 20px;
+                }
+
+                i {
+                    margin-left: 10px;
+                }
+
+                &:hover {
+                    background-color: $color-secondary;
+                    color: $color-white;
+                }
+            }
+
+            .box-icon {
+                position: absolute;
+                z-index: 2;
+                right: 25px;
+                top: 0;
+                width: 70px;
+                height: 90px;
+                transform: translateY(-50%);
+                border-radius: 35px;
+                background-color: $color-white;
+                box-shadow: 0px 10px 60px 0px rgba(73, 154, 250, 0.2);
+                font-size: 45px;
+                color: $color-secondary;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                @include respond-between(xl, c1400) {
+                    font-size: 35px;
+                    height: 75px;
+                    width: 55px;
+                }
+            }
+        }
+    }
+
+    &:hover {
+        .box-thumbnail {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}
+
+/*======= Iconic Box Three =======*/
+.fancy-content-box-two {
+    position: relative;
+    z-index: 1;
+
+    .thumbnail {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+        padding-bottom: 50px;
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 50px;
+            width: 100%;
+            z-index: 2;
+            background: linear-gradient(
+                0,
+                rgb(46, 39, 157) 0%,
+                rgba(46, 39, 157, 0) 100%
+            );
+        }
+
+        img {
+            width: 100%;
+        }
+    }
+
+    .box-content {
+        position: absolute;
+        left: 20px;
+        right: 20px;
+        bottom: 0;
+        z-index: 2;
+        background-color: $color-white;
+        padding: 38px 30px;
+        border-radius: 7px;
+        display: flex;
+        align-items: center;
+        box-shadow: 0px 20px 100px 0px rgba(58, 65, 111, 0.1);
+
+        @include respond-below(xl) {
+            padding: 35px 20px;
+            font-size: 15px;
+            left: 15px;
+            right: 15px;
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 12px;
+
+            @include respond-below(xl) {
+                font-size: 22px;
+            }
+        }
+
+        .icon {
+            max-width: 80px;
+            flex: 0 0 auto;
+
+            @include respond-below(xl) {
+                max-width: 50px;
+            }
+        }
+
+        .content {
+            padding-left: 20px;
+        }
+    }
+
+    &.no-shadow {
+        .box-content {
+            box-shadow: none;
+        }
+    }
+}

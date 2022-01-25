@@ -1,0 +1,38 @@
+/*======= Image title Box =======*/
+.image-title-box {
+    position: relative;
+    z-index: 1;
+
+    .title {
+        font-size: 22px;
+        font-weight: 500;
+        line-height: 1.4;
+        background-color: $color-white;
+        text-align: center;
+        padding: 20px;
+        margin: 0 30px;
+        position: relative;
+        z-index: 2;
+        margin-bottom: -50px;
+
+        @include respond-below(xl) {
+            font-size: 18px;
+        }
+    }
+
+    .image {
+        overflow: hidden;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &:hover {
+        .image {
+            img {
+                transform: scale(1.1);
+            }
+        }
+    }
+}

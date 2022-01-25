@@ -1,0 +1,87 @@
+/*======= Check List =======*/
+.check-list {
+    li {
+        font-size: 16px;
+        font-weight: 500;
+        color: $color-heading;
+        line-height: 1.8;
+        position: relative;
+        padding-left: 40px;
+
+        &::before {
+            content: "\f00c";
+            font: {
+                family: "Font Awesome 5 Pro";
+                weight: 900;
+                size: 12px;
+            }
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 25px;
+        }
+    }
+}
+
+/*======= Check List Two =======*/
+.check-list-two {
+    li {
+        position: relative;
+        padding-left: 70px;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        @include respond-below(xs) {
+            padding-left: 50px;
+            font-size: 15px;
+        }
+
+        &::before {
+            content: "\f00c";
+            font: {
+                family: "Font Awesome 5 Pro";
+                weight: 900;
+                size: 15px;
+            }
+            position: absolute;
+            left: 0;
+            top: 2px;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $color-tertiary;
+            color: $color-white;
+
+            @include respond-below(xs) {
+                height: 35px;
+                width: 35px;
+                font-size: 14px;
+            }
+        }
+
+        h5 {
+            font-size: 22px;
+            margin-bottom: 8px;
+
+            @include respond-below(xs) {
+                font-size: 20px;
+            }
+        }
+    }
+}

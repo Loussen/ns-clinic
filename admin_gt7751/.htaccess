@@ -1,0 +1,6 @@
+#AuthType Basic
+#AuthName "Restricted Area"
+#AuthUserFile /home/rcgastro/www/foodmenu/admin_477925/.htpasswd
+#Require valid-user
+
+Options -Indexes

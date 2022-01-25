@@ -1,0 +1,284 @@
+/*======= Sidebar =======*/
+.primary-sidebar {
+    @include respond-below(lg) {
+        margin-top: 80px;
+    }
+
+    .widget {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        &-title {
+            position: relative;
+            font: {
+                size: 24px;
+                weight: 600;
+            }
+            padding-bottom: 25px;
+            margin-bottom: 30px;
+
+            &::before,
+            &::after {
+                content: "";
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                background-color: $color-primary-10;
+            }
+
+            &::after {
+                background-color: $color-secondary;
+                height: 2px;
+                width: 65px;
+            }
+        }
+
+        &.search-widget {
+            background-color: $color-primary;
+            padding: 30px;
+
+            .widget-title {
+                margin: 0;
+                color: $color-white;
+
+                &::before,
+                &::after {
+                    display: none;
+                }
+            }
+
+            .search-form {
+                position: relative;
+
+                input {
+                    height: 65px;
+                    background-color: $color-white;
+                    border-radius: 30px;
+                    border: none;
+                    font: {
+                        size: 18px;
+                        weight: 400;
+                    }
+                    color: $color-body;
+                    padding: 0 60px 0 25px;
+                }
+
+                button {
+                    position: absolute;
+                    right: 10px;
+                    top: 10px;
+                    bottom: 10px;
+                    width: 45px;
+                    background-color: $color-secondary;
+                    color: $color-white;
+                    border: none;
+                    border-radius: 50%;
+                    transition: 0.3s;
+
+                    &:hover {
+                        background-color: $color-primary;
+                    }
+                }
+            }
+        }
+
+        &.category-widget {
+            ul {
+                li {
+                    &:not(:last-child) {
+                        margin-bottom: 16px;
+                    }
+
+                    a {
+                        display: block;
+                        color: $color-body;
+                        position: relative;
+                        font: {
+                            size: 16px;
+                            weight: 500;
+                        }
+                        line-height: 1.5;
+
+                        &:hover {
+                            color: $color-heading;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            right: 0;
+                            top: 50%;
+                            transform: translateY(-50%);
+                            content: "\f105";
+                            font : {
+                                family: "Font Awesome 5 Pro";
+                                weight: 400;
+                                size: 15px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        &.latest-post-widget {
+            .latest-post-loop {
+                .single-post {
+                    display: flex;
+
+                    &:not(:last-child) {
+                        margin-bottom: 25px;
+                    }
+
+                    .thumbnail {
+                        margin-right: 25px;
+                        flex: 0 0 75px;
+                        width: 75px;
+                        height: 100%;
+                        overflow: hidden;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            object-position: center;
+                            transition: 0.3s;
+                        }
+                    }
+
+                    h6 {
+                        font: {
+                            size: 17px;
+                            weight: 600;
+                        }
+                        line-height: 1.4;
+                        margin-bottom: 10px;
+
+                        a {
+                            color: $color-body;
+
+                            &:hover {
+                                color: $color-heading;
+                            }
+                        }
+                    }
+
+                    .date {
+                        display: block;
+                        font-size: 13px;
+                        line-height: 1;
+                        text-transform: uppercase;
+
+                        i {
+                            margin-right: 5px;
+                        }
+                    }
+                    &:hover {
+                        .thumbnail img {
+                            transform: scale(1.1);
+                        }
+
+                        h6 a {
+                            color: $color-heading;
+                        }
+                    }
+                }
+            }
+        }
+
+        &.cta-widget {
+            .cta {
+                &-content {
+                    padding: 60px 105px 60px 35px;
+                    position: relative;
+                    z-index: 1;
+                    background: {
+                        size: cover;
+                        position: center;
+                    }
+                    line-height: 1.8;
+                    color: $color-white;
+
+                    &::before {
+                        @extend %pseudo-before-100;
+                        background-image: linear-gradient(
+                            90deg,
+                            rgb(46, 39, 157) 0%,
+                            rgba(37, 33, 87, 0.5) 71%,
+                            rgba(33, 30, 59, 0) 100%
+                        );
+                    }
+                }
+
+                &-title {
+                    font: {
+                        size: 24px;
+                        weight: 700;
+                    }
+                    color: $color-white;
+                    margin-bottom: 15px;
+                }
+
+                &-tagline {
+                    display: block;
+                    line-height: 1;
+                    font: {
+                        size: 14px;
+                        weight: 500;
+                    }
+                    text-transform: uppercase;
+                    color: $color-white;
+                    margin-bottom: 8px;
+                }
+
+                &-btn {
+                    font: {
+                        size: 14px;
+                        weight: 600;
+                    }
+                    line-height: 1.1;
+                    text-transform: uppercase;
+                    background-color: $color-secondary;
+                    color: $color-white;
+                    padding: 15px 35px;
+                    border-radius: 30px;
+                    margin-top: 25px;
+
+                    &:hover {
+                        background-color: $color-heading;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+
+        &.tag-cloud-widget {
+            ul {
+                display: flex;
+                flex-wrap: wrap;
+                margin: -5px;
+
+                li {
+                    padding: 5px;
+                }
+
+                a {
+                    display: block;
+                    font-size: 15px;
+                    background-color: $color-grey;
+                    color: $color-body;
+                    padding: 10px;
+                    padding: 7px 15px;
+                    line-height: 1.4;
+
+                    &:hover {
+                        background-color: $color-secondary;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}

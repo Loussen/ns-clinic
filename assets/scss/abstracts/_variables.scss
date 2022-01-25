@@ -1,0 +1,57 @@
+// Font Family
+$font-family: (
+    font-inter: "'Inter', sans-serif",
+    font-lora: "'Lora', serif",
+);
+
+$font-inter: var(--font-inter);
+$font-lora: var(--font-lora);
+
+// Color
+$colors: (
+    color-primary: #2e279d,
+    color-primary-07: rgba(#2e279d, 0.07),
+    color-primary-10: rgba(#2e279d, 0.1),
+    color-primary-20: rgba(#2e279d, 0.2),
+    color-secondary: #499afa,
+    color-secondary-10: rgba(#499afa, 0.1),
+    color-tertiary: #21cdc0,
+    color-fourth: #213360,
+    color-heading: #0e204d,
+    color-heading-07: rgba(#0e204d, 0.07),
+    color-heading-10: rgba(#0e204d, 0.1),
+    color-heading-50: rgba(#0e204d, 0.5),
+    color-body: #4d6581,
+    color-grey: #f3f5f8,
+    color-white: #fff,
+    color-black: #000000,
+);
+
+$color-primary: var(--color-primary);
+$color-primary-07: var(--color-primary-07);
+$color-primary-10: var(--color-primary-10);
+$color-primary-20: var(--color-primary-20);
+$color-secondary: var(--color-secondary);
+$color-secondary-10: var(--color-secondary-10);
+$color-tertiary: var(--color-tertiary);
+$color-fourth: var(--color-fourth);
+$color-heading: var(--color-heading);
+$color-heading-07: var(--color-heading-07);
+$color-heading-10: var(--color-heading-10);
+$color-heading-50: var(--color-heading-50);
+$color-body: var(--color-body);
+$color-grey: var(--color-grey);
+$color-white: var(--color-white);
+$color-black: var(--color-black);
+
+// Breakpoints.
+$breakpoints: (
+    xs: 425px,
+    sm: 576px,
+    md: 768px,
+    lg: 992px,
+    xl: 1200px,
+    c1300: 1300px,
+    c1400: 1400px,
+    c1600: 1600px,
+);

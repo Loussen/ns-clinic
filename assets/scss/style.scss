@@ -1,0 +1,114 @@
+/*-----------------------------------------------------------------------------------
+    Template Name: Seeva - Medical and Dental HTML Template
+    Template URI: https://webtend.net/demo/html/seeva/
+    Author: WebTend
+    Author URI:  https://webtend.net/
+    Version: 1.1
+
+    Note: This is Main Style CSS File.
+-----------------------------------------------------------------------------------
+	CSS INDEX
+	===================
+    #. Common
+    #. Input field
+    #. Keyframes & Animation
+    #. Components
+        ##. Preloader
+        ##. Template Btn
+        ##. Hero Area
+            ##. Hero Area One
+            ##. Hero Area Two
+        ##. Hero Slider
+            ##. Hero Slider One
+            ##. Hero Slider Two
+        ##. Section Heading
+        ##. Image title box
+        ##. Circle Image Gallery
+        ##. Iconic Box
+            ###. Iconic Box
+            ###. Iconic Box Two
+            ###. Iconic Box Three
+        ##. Doctor Boxes
+            ###. Doctor Boxes One
+            ###. Doctor Boxes Two
+            ###. Doctor Boxes Three
+            ###. Doctor Details
+        ##. Testimonials
+            ###. Testimonials Slider
+        ##. Counter
+        ##. Check List
+        ##. Partner Logos
+        ##. Latest Blog
+        ##. Tile Gallery
+        ##. Simple Icon
+        ##. Fancy Content Box
+        ##. Call to Action
+            ###. Call to Action One
+            ###. Call to Action Two
+        ##. Bordered Icon
+        ##. Gallery
+        ##. Pricing Table
+        ##. Accordion
+        ##. Seeva Video
+        ##. Progress-bar
+        ##. Product Tab
+        ##. Page Title
+        ##. Contact
+    #. Blog
+        ##. Blog Post Loop
+        ##. Blog Details
+        ##. Comment Template
+        ##. Pagination
+        ##. Sidebar
+    #. Section
+    #. Shop
+        ##. Product Top-bar
+        ##. Product Loop
+        ##. Product Details
+        ##. Shop Sidebar
+    #. Footer
+-----------------------------------------------------------------------------------*/
+@import "abstracts/mixin";
+@import "abstracts/variables";
+@import "base/common";
+@import "base/input-field";
+@import "base/keyframes-animation";
+@import "header/header";
+@import "components/preloader";
+@import "components/template-btn";
+@import "components/hero-area";
+@import "components/section-heading";
+@import "components/image-title-box";
+@import "components/circle-image-gallery";
+@import "components/iconic-box";
+@import "components/doctor-boxes";
+@import "components/appointment";
+@import "components/testimonial";
+@import "components/counter";
+@import "components/check-list";
+@import "components/partner-logo";
+@import "components/latest-blog";
+@import "components/tile-gallery";
+@import "components/simple-icon";
+@import "components/fancy-content-box";
+@import "components/call-to-action";
+@import "components/bordered-icon";
+@import "components/gallery";
+@import "components/pricing";
+@import "components/accordion";
+@import "components/video";
+@import "components/progressbar";
+@import "components/products";
+@import "components/page-title";
+@import "components/contact";
+@import "components/service-details";
+@import "blog/blog-post";
+@import "blog/blog-details";
+@import "blog/comment-template";
+@import "blog/pagination";
+@import "blog/sidebar";
+@import "sections/section";
+@import "shop/product-loop";
+@import "shop/product-details";
+@import "shop/shop-sidebar";
+@import "footer/footer";

@@ -1,0 +1,35 @@
+/*======= Progress-bar =======*/
+.progress-bar-wrapper {
+    .progress {
+        &-title-wrap {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        &-title,
+        &-percentage {
+            font: {
+                size: 20px;
+                weight: 600;
+            }
+            color: $color-heading;
+            line-height: 1;
+        }
+
+        &-line-wrap {
+            width: 100%;
+            height: 5px;
+            overflow: hidden;
+            background-color: $color-secondary-10;
+        }
+
+        &-line {
+            width: 0;
+            height: 100%;
+            transition: linear 1.2s;
+            background-color: $color-secondary;
+        }
+    }
+}

@@ -1,0 +1,124 @@
+/*======= Input field =======*/
+input:focus,
+textarea:focus,
+select:focus,
+button:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+::placeholder {
+    color: inherit;
+    opacity: 1;
+}
+
+input[type="search"]::-ms-clear {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-ms-reveal {
+    display: none;
+    width: 0;
+    height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+    display: none;
+}
+
+textarea,
+input,
+select,
+.nice-select {
+    width: 100%;
+    height: 65px;
+    color: $color-heading-50;
+    background-color: $color-grey;
+    border: 1px solid transparent;
+    font: {
+        size: 18px;
+        weight: 400;
+        family: $font-inter;
+    }
+    border-radius: 0;
+    line-height: 1.4;
+    padding: 0 30px;
+    transition: all 0.3s ease-out 0s;
+
+    &:focus {
+        border-color: $color-secondary;
+        color: $color-heading;
+    }
+}
+
+.nice-select {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    &:active,
+    &.open,
+    &:focus,
+    &:hover {
+        border-color: $color-secondary;
+    }
+
+    .list {
+        width: 100%;
+        border-radius: 0;
+        box-shadow: 0 0 0 1px $color-secondary;
+        color: $color-heading;
+        font : {
+            family: $font-inter;
+            size: 16px;
+            weight: 500;
+        }
+
+        .selected {
+            font-weight: normal;
+        }
+    }
+
+    &::after {
+        content: "\f107";
+        font: {
+            size: 15px;
+            weight: 400;
+            family: "Font Awesome 5 Pro";
+        }
+        line-height: 1;
+        border: none;
+        position: relative;
+        top: 2px;
+        right: 0;
+        display: block;
+        transform: rotate(0);
+        transform-origin: 0;
+        width: auto;
+        height: auto;
+        transition: all 0.3s ease-out 0s;
+    }
+
+    &.open {
+        &::after {
+            transform: rotate(0);
+        }
+    }
+}
+
+textarea {
+    height: 140px;
+    padding-top: 20px;
+    display: inherit;
+    resize: none;
+}
+
+button {
+    border: none;
+}

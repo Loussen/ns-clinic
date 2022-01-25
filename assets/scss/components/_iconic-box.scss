@@ -1,0 +1,432 @@
+/*======= Iconic Box =======*/
+.iconic-box {
+    position: relative;
+    background-color: $color-white;
+    transition: all 0.3s;
+    padding: 50px;
+    text-align: center;
+
+    @include respond-below(xl) {
+        padding: 40px 35px;
+        font-size: 15px;
+    }
+
+    .icon {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        line-height: 1;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        overflow: hidden;
+        margin-bottom: 15px;
+        position: relative;
+        z-index: 1;
+        font-size: 55px;
+        color: $color-secondary;
+
+        @include respond-below(md) {
+            height: 100px;
+            width: 100px;
+        }
+
+        img {
+            max-width: 100px;
+
+            @include respond-below(md) {
+                max-width: 65px;
+            }
+        }
+
+        &::before {
+            @extend %pseudo-before-100;
+            border-radius: 50%;
+            background: linear-gradient(
+                180deg,
+                rgb(73, 154, 250) 0%,
+                rgba(222, 237, 254, 0.5) 82%,
+                rgba(255, 255, 255, 0) 100%
+            );
+            opacity: 0.102;
+        }
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 15px;
+
+        @include respond-below(xs) {
+            font-size: 22px;
+        }
+    }
+
+    .box-link-wrap {
+        position: relative;
+        margin-top: 20px;
+        font-size: 15px;
+        text-align: center;
+        min-height: 45px;
+        overflow: hidden;
+
+        .link-icon {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 0;
+            height: 45px;
+            width: 45px;
+            line-height: 45px;
+            background-color: $color-secondary-10;
+            border-radius: 50%;
+            transition: all 0.3s;
+            color: $color-secondary;
+        }
+
+        .box-link {
+            position: absolute;
+            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            top: 100%;
+            background-color: $color-secondary;
+            color: $color-white;
+            width: 160px;
+            line-height: 45px;
+            border-radius: 30px;
+            font: {
+                size: 15px;
+                weight: 600;
+                family: $font-inter;
+            }
+            transition: all 0.4s;
+            visibility: hidden;
+            opacity: 0;
+
+            i {
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0px 20px 100px 0px rgba(58, 65, 111, 0.1);
+
+        .box-link-wrap {
+            .link-icon {
+                opacity: 0;
+                visibility: hidden;
+            }
+
+            .box-link {
+                visibility: visible;
+                opacity: 1;
+                top: 0;
+            }
+        }
+    }
+}
+
+/*======= Iconic Box Two =======*/
+.iconic-box-two {
+    background-color: $color-white;
+    border-radius: 7px;
+    padding: 40px 35px 50px;
+    text-align: center;
+
+    @include respond-between(lg, xl) {
+        padding: 40px 30px 50px;
+        font-size: 15px;
+    }
+
+    .icon {
+        display: inline-flex;
+        width: 120px;
+        height: 120px;
+        align-items: center;
+        justify-content: center;
+        background-color: $color-secondary-10;
+        color: $color-secondary;
+        font-size: 65px;
+        border-radius: 50%;
+        margin-bottom: 35px;
+        position: relative;
+        z-index: 1;
+        transition: 0.4s;
+    }
+
+    .title {
+        font: {
+            size: 22px;
+            weight: 500;
+        }
+        margin-bottom: 10px;
+    }
+
+    .box-link {
+        line-height: 1;
+        margin-top: 20px;
+        display: inline-flex;
+        width: 45px;
+        height: 45px;
+        justify-content: center;
+        align-items: center;
+        background-color: $color-secondary-10;
+        color: $color-secondary;
+        border-radius: 50%;
+        position: relative;
+        z-index: 1;
+        transition: 0.4s;
+    }
+
+    .box-link,
+    .icon {
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 0;
+            height: 0;
+            background-color: $color-secondary;
+            border-radius: 50%;
+            z-index: -1;
+            transition: 0.4s;
+            opacity: 0;
+        }
+    }
+
+    &:hover {
+        .box-link,
+        .icon {
+            color: $color-white;
+
+            &::before {
+                width: 100%;
+                height: 100%;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+/*======= Iconic Box Three =======*/
+.iconic-box-three {
+    position: relative;
+    z-index: 1;
+    background-color: $color-grey;
+    text-align: center;
+    padding: 80px 60px;
+
+    @include respond-below(xl) {
+        padding: 80px 40px;
+    }
+
+    .title {
+        font-size: 24px;
+        margin-bottom: 15px;
+
+        a:hover {
+            color: $color-tertiary;
+        }
+    }
+
+    .icon {
+        line-height: 0.5;
+        color: $color-tertiary;
+        font-size: 75px;
+        margin-bottom: 30px;
+    }
+
+    .box-link {
+        font: {
+            size: 17px;
+            weight: 600;
+        }
+        color: $color-heading;
+        text-transform: capitalize;
+        line-height: 1;
+        border: 2px solid $color-primary-10;
+        border-radius: 25px;
+        padding: 14px 25px;
+        margin-top: 25px;
+
+        i {
+            margin-left: 5px;
+            font-size: 15px;
+        }
+
+        &:hover {
+            background-color: $color-tertiary;
+            color: $color-white;
+            border-color: $color-tertiary;
+        }
+    }
+
+    .big-icon {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -45%);
+        font-size: 310px;
+        opacity: 0.03;
+        z-index: -1;
+        display: none;
+        line-height: 0.5;
+    }
+
+    &.featured-box {
+        z-index: 2;
+
+        &,
+        .title,
+        .title a {
+            color: $color-white;
+        }
+
+        &::before {
+            content: "";
+            position: absolute;
+            left: 0;
+            right: 0;
+            top: -20px;
+            bottom: -20px;
+            z-index: -1;
+            background-color: $color-fourth;
+        }
+
+        .box-link {
+            background-color: $color-tertiary;
+            color: $color-white;
+            border-color: $color-tertiary;
+        }
+
+        .big-icon {
+            display: block;
+        }
+    }
+}
+
+/*======= Iconic Boxes Big Images =======*/
+.iconic-boxes-big-image {
+    position: relative;
+    z-index: 1;
+    padding-bottom: 120px;
+
+    .single-iconic-item {
+        background-color: $color-white;
+        text-align: center;
+        padding: 45px 30px;
+        margin-bottom: 30px;
+
+        .icon {
+            margin-bottom: 30px;
+            font-size: 80px;
+            line-height: 0.5;
+            color: $color-secondary;
+
+            @include respond-below(xl) {
+                font-size: 72px;
+            }
+        }
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 15px;
+
+            @include respond-below(xl) {
+                font-size: 22px;
+            }
+        }
+    }
+
+    .big-image {
+        position: absolute;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+        z-index: -1;
+
+        @include respond-below(c1400) {
+            max-width: 400px;
+            top: 130px;
+        }
+
+        @include respond-below(xl) {
+            max-width: 300px;
+            top: 250px;
+        }
+
+        @include respond-below(lg) {
+            display: none;
+        }
+    }
+
+    .border-image {
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: -2;
+
+        @include respond-below(c1400) {
+            max-width: 920px;
+        }
+
+        @include respond-below(xl) {
+            max-width: 720px;
+        }
+        @include respond-below(lg) {
+            display: none;
+        }
+    }
+
+    .first-row {
+        .first-column {
+            @include respond-below(c1400) {
+                margin-left: 70px;
+            }
+
+            @include respond-below(xl) {
+                margin-left: 40px;
+            }
+
+            @include respond-below(lg) {
+                margin-left: 0;
+            }
+        }
+
+        .second-column {
+            @include respond-below(c1400) {
+                margin-right: 70px;
+            }
+
+            @include respond-below(xl) {
+                margin-right: 40px;
+            }
+
+            @include respond-below(lg) {
+                margin-right: 0;
+            }
+        }
+    }
+
+    .second-row {
+        .first-column {
+            margin-left: -70px;
+
+            @include respond-below(c1400) {
+                margin-left: 0;
+            }
+        }
+
+        .second-column {
+            margin-right: -70px;
+
+            @include respond-below(c1400) {
+                margin-right: 0;
+            }
+        }
+    }
+}

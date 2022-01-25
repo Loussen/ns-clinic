@@ -1,0 +1,51 @@
+/*======= Section Heading =======*/
+.section-heading {
+    .tagline {
+        font: {
+            size: 18px;
+            weight: 500;
+        }
+        color: $color-secondary;
+        line-height: 1.2;
+        margin-bottom: 15px;
+    }
+
+    .title {
+        font-size: 45px;
+        line-height: 1.35;
+
+        @include respond-below(xl) {
+            font-size: 38px;
+        }
+
+        @include respond-below(lg) {
+            font-size: 32px;
+        }
+
+        @include respond-below(sm) {
+            font-size: 28px;
+        }
+    }
+
+    p {
+        font: {
+            size: 18px;
+            weight: 500;
+        }
+        color: $color-primary;
+        line-height: 1.2;
+        margin-top: 25px;
+
+        @include respond-below(sm) {
+            font-size: 15px;
+        }
+    }
+
+    &.heading-white {
+        .tagline,
+        .title,
+        p {
+            color: $color-white;
+        }
+    }
+}

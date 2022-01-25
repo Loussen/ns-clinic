@@ -1,0 +1,124 @@
+/*======= Product Top-bar =======*/
+.product-loop-topbar {
+    margin-bottom: 40px;
+
+    .product-loop {
+        &-count {
+            font: {
+                family: $font-lora;
+                size: 18px;
+                weight: 500;
+            }
+            color: $color-heading;
+        }
+
+        &-filter {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            @include respond-below(sm) {
+                justify-content: flex-start;
+                margin-top: 20px;
+            }
+
+            .nice-select {
+                width: 215px;
+                height: 40px;
+                background-color: transparent;
+                border: 1px solid $color-heading-10;
+                font: {
+                    size: 14px;
+                    weight: 600;
+                    family: $font-inter;
+                }
+                color: $color-heading;
+                border-radius: 20px;
+
+                .list {
+                    box-shadow: 0 0 0 1px $color-heading-10;
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+}
+
+/*======= Product Loop =======*/
+.single-product {
+    .thumbnail {
+        position: relative;
+        margin-bottom: 25px;
+
+        img {
+            width: 100%;
+        }
+
+        .wishlist-btn {
+            position: absolute;
+            z-index: 2;
+            font-size: 18px;
+            line-height: 1;
+            color: $color-secondary;
+            right: 30px;
+            top: 20px;
+        }
+    }
+
+    .content {
+        display: flex;
+        align-items: flex-start;
+        line-height: 1;
+        justify-content: space-between;
+        flex-wrap: wrap;
+
+        .content-left {
+            flex: 0 0 80%;
+            max-width: 80%;
+        }
+
+        .content-right {
+            flex: 0 0 18%;
+            max-width: 18%;
+            text-align: right;
+        }
+
+        .name {
+            font: {
+                size: 18px;
+                weight: 500;
+            }
+            margin-bottom: 14px;
+
+            a:hover {
+                color: $color-secondary;
+            }
+        }
+
+        .categories {
+            display: flex;
+
+            a {
+                color: $color-body;
+
+                &:hover {
+                    color: $color-secondary;
+                }
+            }
+
+            li {
+                margin-right: 5px;
+            }
+        }
+
+        .price {
+            line-height: 1.2;
+            font: {
+                family: $font-lora;
+                size: 18px;
+                weight: 500;
+            }
+            color: $color-primary;
+        }
+    }
+}

@@ -1,0 +1,211 @@
+/*======= Contact Info =======*/
+.contact-info-wrapper {
+    padding: 80px 70px;
+    background-color: $color-secondary;
+    height: 100%;
+
+    @include respond-below(lg) {
+        height: auto;
+    }
+
+    @include respond-below(md) {
+        padding: 80px 50px;
+    }
+
+    @include respond-below(sm) {
+        padding: 60px 30px;
+    }
+
+    &,
+    a {
+        color: $color-white;
+    }
+
+    .single-contact-info {
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+    }
+
+    .info-title {
+        font-size: 27px;
+        color: $color-white;
+        display: flex;
+        align-items: center;
+        margin-bottom: 25px;
+
+        @include respond-below(sm) {
+            font-size: 22px;
+        }
+
+        i {
+            font-size: 35px;
+            line-height: 1;
+            margin-right: 15px;
+
+            @include respond-below(sm) {
+                font-size: 25px;
+            }
+        }
+    }
+
+    ul {
+        li {
+            display: flex;
+            line-height: 1;
+
+            @include respond-below(xs) {
+                flex-direction: column;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 15px;
+            }
+
+            span {
+                width: 38%;
+                position: relative;
+                font-weight: 500;
+
+                @include respond-below(xs) {
+                    width: 100%;
+                }
+
+                &::after {
+                    content: ":";
+                    position: absolute;
+                    right: 0;
+                    top: 50%;
+                    transform: translateY(-50%);
+
+                    @include respond-below(xs) {
+                        position: unset;
+                        margin-left: 10px;
+                        transform: translateY(0);
+                    }
+                }
+            }
+
+            a {
+                margin-left: 10px;
+
+                @include respond-below(xs) {
+                    margin-left: 0;
+                    margin-top: 10px;
+                }
+            }
+        }
+    }
+
+    .social-icon {
+        margin-top: 20px;
+        line-height: 1;
+
+        i {
+            font-size: 20px;
+            margin-right: 15px;
+        }
+    }
+}
+
+/*======= Working Chart =======*/
+.working-hour-chart {
+    background-color: $color-primary;
+    padding: 80px 70px;
+    height: 100%;
+
+    @include respond-below(lg) {
+        margin-top: 30px;
+        height: auto;
+    }
+
+    @include respond-below(md) {
+        padding: 80px 50px;
+    }
+
+    @include respond-below(sm) {
+        padding: 60px 30px;
+    }
+
+    .chart-title {
+        color: $color-white;
+        font-size: 35px;
+        margin-bottom: 25px;
+
+        @include respond-below(sm) {
+            font-size: 26px;
+        }
+    }
+
+    ul {
+        li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: $color-white;
+            line-height: 1.2;
+            font: {
+                size: 18px;
+                weight: 500;
+            }
+
+            @include respond-below(sm) {
+                font-size: 16px;
+            }
+
+            &:not(:last-child) {
+                padding-bottom: 20px;
+                margin-bottom: 20px;
+                border-bottom: 2px dashed rgba(#fff, 0.2);
+            }
+
+            i {
+                margin-right: 12px;
+            }
+        }
+    }
+}
+
+.contact-map {
+    width: 100%;
+    height: 720px;
+
+    @include respond-below(lg) {
+        height: 500px;
+    }
+
+    @include respond-below(sm) {
+        height: 320px;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+}
+
+.contact-form {
+    .input-field {
+        margin-bottom: 40px;
+
+        label {
+            font: {
+                size: 20px;
+                family: $font-lora;
+            }
+            color: $color-heading;
+            display: block;
+            margin-bottom: 10px;
+            cursor: pointer;
+
+            @include respond-below(sm) {
+                font-size: 18px;
+            }
+        }
+
+        textarea {
+            height: 150px;
+        }
+    }
+}

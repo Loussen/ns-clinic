@@ -1,0 +1,30 @@
+.sidebar{background:#282733!important;}
+body{
+	font-size: 13px;
+	height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font-weight: 300;
+    -ms-text-size-adjust: 100%;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.user-profile div{padding-top:10px!important;}
+
+li a.waves-effect{color: #868aa8!important;}
+li a.waves-effect.active{
+	color: white!important;
+	background-color:#db1430!important;
+}
+li a.waves-effect:hover{background-color: #2f2e3c!important;}
+li a.waves-effect.active i{color:#fff!important;}
+
+.navbar-header{background-color:#201f2b!important;}
+.top-left-part{height:60px!important;background-color:#201f2b!important;}
+.logo_label{color: white!important;font-weight:normal!important;}
+.btn-primary{background:#716aca!important;border: 1px solid #716aca!important;}
+.text-primary{color:#716aca!important;}
+.li_active{color:#716aca!important;}
+.bg-title h4{color: rgba(0,0,0,.8)!important;}
+#side-menu > li > a.active{border:none!important;}
+.table-hover>tbody>tr:hover, .table-striped>tbody>tr:nth-of-type(odd), .table>tbody>tr.active>td, .table>tbody>tr.active>th, .table>tbody>tr>td.active, .table>tbody>tr>th.active, .table>tfoot>tr.active>td, .table>tfoot>tr.active>th, .table>tfoot>tr>td.active, .table>tfoot>tr>th.active, .table>thead>tr.active>td, .table>thead>tr.active>th, .table>thead>tr>td.active, .table>thead>tr>th.active{background-color: #f4f5f8!important;}

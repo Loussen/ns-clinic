@@ -1,0 +1,567 @@
+/*======= Testimonials Slider =======*/
+.testimonial-slider-one {
+    .single-testimonial-slider {
+        .testimonial-inner {
+            display: flex;
+            align-items: flex-start;
+
+            @include respond-between(lg, xl) {
+                flex-direction: column;
+            }
+
+            @include respond-below(sm) {
+                flex-direction: column;
+            }
+
+            .avatar {
+                flex: 0 0 85px;
+                margin-right: 30px;
+
+                @include respond-between(lg, xl) {
+                    margin-bottom: 30px;
+                }
+
+                @include respond-below(sm) {
+                    margin-bottom: 30px;
+                }
+            }
+
+            .testimonial-desc {
+                font: {
+                    size: 24px;
+                    style: italic;
+                    family: $font-lora;
+                    weight: 500;
+                }
+                color: $color-heading;
+                line-height: 1.75;
+
+                @include respond-below(c1400) {
+                    font-size: 22px;
+                }
+
+                @include respond-below(sm) {
+                    font-size: 20px;
+                }
+            }
+
+            .author-info {
+                margin-top: 25px;
+
+                .name {
+                    font: {
+                        size: 20px;
+                        weight: 600;
+                    }
+                    line-height: 1.2;
+                }
+
+                .title {
+                    font: {
+                        size: 16px;
+                        weight: 500;
+                    }
+                    color: $color-secondary;
+                    line-height: 1;
+                }
+            }
+        }
+    }
+
+    ul.slick-dots {
+        display: flex;
+        padding-left: 110px;
+        margin-top: 70px;
+
+        @include respond-between(lg, xl) {
+            padding-left: 0;
+        }
+
+        @include respond-below(sm) {
+            padding-left: 0;
+            margin-top: 50px;
+        }
+
+        li {
+            height: 15px;
+            width: 15px;
+            background-color: $color-primary-10;
+            border-radius: 50%;
+            transition: 0.3s;
+            cursor: pointer;
+
+            button {
+                font-size: 0;
+                opacity: 0;
+            }
+
+            &:not(:last-child) {
+                margin-right: 10px;
+            }
+
+            &.slick-active {
+                background-color: $color-secondary;
+            }
+        }
+    }
+}
+
+.testimonial-one-wrap {
+    padding: 130px 18%;
+
+    @include respond-below(c1600) {
+        padding: 130px 10%;
+    }
+
+    @include respond-below(c1400) {
+        padding: 130px 7%;
+    }
+
+    @include respond-below(md) {
+        padding: 130px 5%;
+    }
+
+    @include respond-below(sm) {
+        padding: 130px 0;
+    }
+}
+
+/*======= Testimonials Slider Two =======*/
+.testimonial-slider-two {
+    position: relative;
+
+    .single-testimonial-slider {
+        background-color: $color-white;
+        border-radius: 7px;
+        padding: 50px;
+
+        @include respond-below(xl) {
+            padding: 50px 40px;
+        }
+
+        @include respond-below(xs) {
+            padding: 45px 35px;
+        }
+
+        .content {
+            font: {
+                size: 24px;
+                family: $font-lora;
+                style: italic;
+                weight: 500;
+            }
+            line-height: 1.75;
+            color: $color-heading;
+
+            @include respond-below(xl) {
+                font-size: 22px;
+            }
+
+            @include respond-below(sm) {
+                font-size: 20px;
+            }
+        }
+
+        .author-info-wrapper {
+            margin-top: 25px;
+            display: flex;
+            align-items: center;
+
+            @include respond-below(xs) {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+        }
+
+        .avatar {
+            flex: 0 0 70px;
+            margin-right: 20px;
+
+            @include respond-below(xs) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            img {
+                width: 70px;
+                height: 70px;
+                border-radius: 50%;
+            }
+        }
+
+        .author-info {
+            .name {
+                font: {
+                    size: 20px;
+                    weight: 600;
+                }
+            }
+
+            .title {
+                font: {
+                    size: 16px;
+                    weight: 500;
+                }
+                color: $color-secondary;
+                line-height: 1;
+            }
+        }
+    }
+}
+
+.testimonial-slider-arrow {
+    margin-top: 60px;
+    text-align: center;
+
+    .slick-arrow {
+        width: 50px;
+        height: 50px;
+        border: none;
+        font-size: 20px;
+        color: $color-heading;
+        border-radius: 50%;
+        transition: 0.3s;
+        margin: 0 5px;
+
+        &.next-arrow,
+        &:hover {
+            background-color: $color-secondary;
+            color: $color-white;
+        }
+    }
+}
+
+/*======= Testimonials Box =======*/
+.testimonial-box {
+    background-color: $color-white;
+    box-shadow: 0px 10px 60px 0px rgba(73, 154, 250, 0.1);
+    padding: 45px;
+    position: relative;
+    z-index: 1;
+
+    @include respond-below(xl) {
+        padding: 40px 30px;
+    }
+
+    .author-info-wrapper {
+        display: flex;
+        align-items: center;
+        margin-bottom: 40px;
+
+        @include respond-below(xs) {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        @include respond-below(md) {
+            margin-bottom: 30px;
+        }
+
+        .avatar {
+            flex: 0 0 65px;
+            margin-right: 20px;
+
+            @include respond-below(xs) {
+                margin-right: 0;
+                margin-bottom: 20px;
+            }
+
+            img {
+                width: 65px;
+                height: 65px;
+            }
+        }
+
+        .name {
+            font: {
+                size: 20px;
+                weight: 600;
+            }
+
+            @include respond-below(xl) {
+                font-size: 18px;
+            }
+        }
+
+        .title {
+            font: {
+                size: 16px;
+                weight: 500;
+            }
+            color: $color-secondary;
+            line-height: 1;
+
+            @include respond-below(xl) {
+                font-size: 15px;
+            }
+        }
+
+        .rating {
+            display: flex;
+            align-items: center;
+            line-height: 1;
+            margin-top: 5px;
+
+            li {
+                margin-right: 5px;
+                font-size: 12px;
+                color: #ffae00;
+            }
+        }
+    }
+
+    .content {
+        font: {
+            size: 22px;
+            family: $font-lora;
+            style: italic;
+            weight: 500;
+        }
+        line-height: 1.6;
+        color: $color-heading;
+
+        @include respond-below(xl) {
+            font-size: 20px;
+        }
+
+        @include respond-below(xs) {
+            font-size: 18px;
+        }
+    }
+
+    .quote-icon {
+        position: absolute;
+        z-index: -1;
+        right: 30px;
+        top: 30px;
+        line-height: 1;
+        opacity: 0.02;
+
+        @include respond-below(xl) {
+            max-width: 180px;
+        }
+    }
+}
+
+/*======= Testimonials Three =======*/
+.testimonial-slider-three {
+    position: relative;
+    z-index: 2;
+
+    .thumb-wrapper {
+        margin-bottom: 40px;
+        padding: 0px 20px;
+
+        .slick-track {
+            height: 100px;
+            display: flex;
+            align-items: center;
+        }
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+
+            @include respond-below(xs) {
+                height: 50px;
+                width: 50px;
+            }
+        }
+
+        .single-thumb {
+            opacity: 0.4;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+
+            &.slick-current {
+                opacity: 1;
+
+                img {
+                    height: 100px;
+                    width: 100px;
+
+                    @include respond-below(xs) {
+                        height: 80px;
+                        width: 80px;
+                    }
+                }
+            }
+        }
+    }
+
+    .content-wrapper {
+        text-align: center;
+
+        .content {
+            color: $color-white;
+            font: {
+                family: $font-lora;
+                size: 24px;
+                style: italic;
+            }
+            line-height: 1.8;
+
+            @include respond-below(lg) {
+                font-size: 20px;
+            }
+        }
+
+        .author-info {
+            margin-top: 35px;
+
+            .name {
+                font-size: 20px;
+                font-weight: 600;
+                color: $color-white;
+                margin-bottom: 5px;
+
+                @include respond-below(xs) {
+                    font-size: 18px;
+                }
+            }
+
+            .title {
+                line-height: 1;
+                color: $color-white;
+
+                @include respond-below(xs) {
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+
+    .slider-arrows {
+        @include respond-below(md) {
+            display: none;
+        }
+
+        .slick-arrow {
+            width: 50px;
+            height: 50px;
+            border: 2px solid $color-white;
+            border-radius: 50%;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: 0.3s;
+            position: absolute;
+            left: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+
+            &:hover {
+                background-color: $color-secondary;
+                color: $color-white;
+            }
+
+            @include respond-below(lg) {
+                left: -5px;
+            }
+
+            &.next-arrow {
+                left: auto;
+                right: 15px;
+
+                @include respond-below(lg) {
+                    left: auto;
+                    right: -5px;
+                }
+            }
+        }
+    }
+}
+
+/*======= Testimonials Shapes =======*/
+.testimonial-shapes {
+    position: relative;
+    z-index: 2;
+
+    .shape-images {
+        .image-one,
+        .image-two {
+            position: absolute;
+            z-index: -1;
+            border-radius: 150px;
+            border-top-left-radius: 0;
+            background: {
+                size: cover;
+                position: center;
+            }
+
+            @include respond-below(xl) {
+                display: none;
+            }
+        }
+
+        .image-one {
+            width: 320px;
+            height: 310px;
+            left: 6%;
+            bottom: 10%;
+
+            @include respond-below(c1600) {
+                left: 2%;
+                width: 280px;
+                height: 260px;
+            }
+        }
+
+        .image-two {
+            right: 10%;
+            top: 15%;
+            width: 300px;
+            height: 315px;
+
+            @include respond-below(c1600) {
+                right: 2%;
+                width: 260px;
+                height: 275px;
+            }
+        }
+    }
+}
+
+/*======= Testimonials Two Bg =======*/
+.testimonial-two-bg {
+    position: relative;
+    z-index: 2;
+
+    .bg-one,
+    .bg-two {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: 0;
+        top: 0;
+        height: 100%;
+        width: calc((100% - 1090px) / 2);
+        background: {
+            size: cover;
+            position: center;
+        }
+
+        @include respond-below(xl) {
+            width: calc((100% - 850px) / 2);
+        }
+
+        @include respond-below(lg) {
+            width: calc((100% - 650px) / 2);
+        }
+
+        @include respond-below(md) {
+            display: none;
+        }
+    }
+
+    .bg-two {
+        left: auto;
+        right: 0;
+    }
+}

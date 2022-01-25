@@ -1,0 +1,186 @@
+/*======= Blog Post Loop =======*/
+.blog-loop {
+    @include respond-above(xl) {
+        padding-right: 70px;
+    }
+
+    .single-blog-post {
+        position: relative;
+
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        .post {
+            &-thumbnail {
+                position: relative;
+
+                img {
+                    width: 100%;
+                }
+
+                .post-link {
+                    position: absolute;
+                    z-index: 2;
+                    right: 40px;
+                    bottom: 0;
+                    background-color: $color-white;
+                    color: $color-primary;
+                    box-shadow: 0px 10px 60px 0px rgba(22, 37, 66, 0.15);
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    font-size: 18px;
+                    line-height: 1;
+                    transform: translateY(50%);
+                    transition: 0.3s;
+
+                    @include respond-below(sm) {
+                       height: 50px;
+                       width: 50px;
+                       font-size: 15px;
+                    }
+                }
+            }
+
+            &-content {
+                background-color: $color-white;
+                padding: 40px 40px 25px;
+                box-shadow: 0px 10px 60px 0px rgba(22, 37, 66, 0.06);
+
+                @include respond-below(md) {
+                    padding: 40px 35px 25px;
+                }
+
+                @include respond-below(xs) {
+                    padding: 40px 30px 25px;
+                }
+
+                p {
+                    line-height: 28px;
+                    margin-top: 20px;
+                }
+            }
+
+            &-author {
+                font-size: 16px;
+                line-height: 1;
+                color: $color-body;
+                margin-bottom: 20px;
+
+                @include respond-below(xs) {
+                    font-size: 14px;
+                }
+
+                img {
+                    margin-right: 10px;
+                }
+            }
+
+            &-title {
+                font: {
+                    size: 26px;
+                    weight: 600;
+                }
+                line-height: 1.55;
+
+                @include respond-below(xl) {
+                    font-size: 24px;
+                }
+
+                @include respond-below(md) {
+                    font-size: 22px;
+                }
+
+                @include respond-below(xs) {
+                    font-size: 20px;
+                }
+            }
+
+            &-meta {
+                display: flex;
+                margin-top: 25px;
+                padding-top: 15px;
+                border-top: 1px solid $color-heading-07;
+
+                @include respond-below(xs) {
+                    flex-wrap: wrap;
+                }
+
+                li {
+                    margin-top: 10px;
+
+                    &:not(:last-child) {
+                        margin-right: 20px;
+
+                        @include respond-below(sm) {
+                            margin-right: 15px;
+                        }
+                    }
+
+                    &.post-share {
+                        margin-left: auto;
+
+                        @include respond-below(xs) {
+                            margin-left: 0;
+                        }
+                    }
+
+                    a {
+                        font-size: 16px;
+                        line-height: 1;
+                        display: block;
+                        color: $color-body;
+
+                        i {
+                            margin-right: 10px;
+                            font-size: 15px;
+                        }
+
+                        &:hover {
+                            color: $color-secondary;
+                        }
+                    }
+                }
+            }
+        }
+
+        &:hover {
+            .post-thumbnail {
+                .post-link {
+                    background-color: $color-secondary;
+                    color: $color-white;
+                }
+            }
+        }
+
+        &.bg-dark-post {
+            .post {
+                &-content {
+                    background-color: #1c213e;
+                    box-shadow: none;
+                }
+
+                &-title a {
+                    color: $color-white;
+                }
+
+                &-author {
+                    margin-bottom: 0;
+                    margin-top: 15px;
+                    color: $color-white;
+                }
+
+                &-meta {
+                    border-color: rgba(#fff, 0.1);
+                    li a {
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+}

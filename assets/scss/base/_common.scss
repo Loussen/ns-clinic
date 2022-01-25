@@ -1,0 +1,306 @@
+/*======= Common =======*/
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
+
+:root {
+    @each $color, $value in $colors {
+        --#{$color}: #{$value};
+    }
+
+    @each $family, $value in $font-family {
+        --#{$family}: #{$value};
+    }
+}
+
+body {
+    color: $color-body;
+    font-family: $font-inter;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 2;
+    overflow-x: hidden !important;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    transition: all 0.3s ease-out 0s;
+}
+
+.slick-slide img {
+    display: inline-block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $font-lora;
+    font-weight: 400;
+    line-height: 1.2;
+    color: $color-heading;
+    margin: 0px;
+
+    a {
+        color: $color-heading;
+    }
+}
+
+ul,
+ol {
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+}
+
+p {
+    margin: 0px;
+}
+
+a {
+    color: $color-secondary;
+    display: inline-block;
+    transition: all 0.3s ease-out 0s;
+
+    &:hover {
+        color: $color-secondary;
+        text-decoration: none;
+    }
+
+    &:focus {
+        text-decoration: none;
+        outline: none;
+        box-shadow: none;
+    }
+}
+
+a,
+span {
+    display: inline-block;
+}
+
+.slick-initialized .slick-slide:focus {
+    text-decoration: none;
+    outline: none;
+    box-shadow: none;
+}
+
+/*======= Colors & Background =======*/
+@each $color, $value in $colors {
+    .#{$color} {
+        color: var(--#{$color}) !important;
+    }
+
+    .bg-#{$color} {
+        background-color: var(--#{$color});
+    }
+}
+
+/*======= Custom Container =======*/
+.container-1300 {
+    max-width: 1300px;
+}
+
+.container-1400 {
+    max-width: 1400px;
+}
+
+.container-1450 {
+    max-width: 1450px;
+}
+
+.container-1500 {
+    max-width: 1500px;
+}
+
+.container-1600 {
+    max-width: 1600px;
+}
+
+.container-fluid {
+    &.fluid-70 {
+        @include respond-above(c1600) {
+            padding-left: 70px;
+            padding-right: 70px;
+        }
+    }
+
+    &.fluid-100 {
+        @include respond-above(c1600) {
+            padding-left: 100px;
+            padding-right: 100px;
+        }
+    }
+}
+
+/*======= Common Class =======*/
+%pseudo-before-100 {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.border-top-primary {
+    border-top: 1px solid $color-primary-10;
+}
+
+/*======= Background Sizes =======*/
+.bg-size-cover {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.blend-mode-multiply {
+    background-blend-mode: multiply;
+}
+
+.overly-primary-95 {
+    position: relative;
+    z-index: 1;
+
+    &::before {
+        @extend %pseudo-before-100;
+        background-color: $color-primary;
+        opacity: 0.95;
+    }
+}
+
+/*======= Spacing =======*/
+.section-gap {
+    padding-top: 130px;
+    padding-bottom: 130px;
+}
+
+.section-gap-top {
+    padding-top: 130px;
+}
+
+.section-gap-top-less {
+    padding-top: 100px;
+    padding-bottom: 130px;
+}
+
+.section-gap-bottom {
+    padding-bottom: 130px;
+}
+
+.section-gap-100 {
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.section-gap-80 {
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+.about-content-gap {
+    padding-left: 30px;
+    padding-bottom: 120px;
+
+    @include respond-below(xl) {
+        padding-bottom: 60px;
+        padding-left: 0;
+    }
+}
+
+.mt-10 {
+    margin-top: 10px;
+}
+
+.mt-20 {
+    margin-top: 20px;
+}
+
+.mt-30 {
+    margin-top: 30px;
+}
+
+.mt-35 {
+    margin-top: 35px;
+}
+
+.mt-40 {
+    margin-top: 40px;
+}
+
+.mt-50 {
+    margin-top: 50px;
+}
+
+.mt-60 {
+    margin-top: 60px;
+}
+
+.mb-20 {
+    margin-bottom: 20px;
+}
+
+.mb-30 {
+    margin-bottom: 30px;
+}
+
+.mb-35 {
+    margin-bottom: 35px;
+}
+
+.mb-40 {
+    margin-bottom: 40px;
+}
+
+.mb-50 {
+    margin-bottom: 50px;
+}
+
+.mb-60 {
+    margin-bottom: 60px;
+}
+
+.mb-70 {
+    margin-bottom: 70px;
+}
+
+@include respond-below(xl) {
+    .mb-xl-50 {
+        margin-bottom: 50px;
+    }
+}
+
+@include respond-below(lg) {
+    .mb-md-50 {
+        margin-bottom: 50px;
+    }
+
+    .mb-md-80 {
+        margin-bottom: 80px;
+    }
+
+    .mt-md-50 {
+        margin-top: 50px;
+    }
+
+    .mt-md-80 {
+        margin-top: 80px;
+    }
+
+    .mt-md-40 {
+        margin-top: 40px;
+    }
+}
+
+@include respond-below(md) {
+    .mt-sm-30 {
+        margin-top: 30px;
+    }
+}

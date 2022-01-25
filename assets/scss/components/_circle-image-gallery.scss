@@ -1,0 +1,35 @@
+/*======= Circle Image Gallery =======*/
+.circle-image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+
+    .single-img {
+        &:not(:last-child) {
+            margin-bottom: 30px;
+        }
+
+        a {
+            display: block;
+        }
+    }
+
+    .gallery-right {
+        margin-top: 80px;
+
+        .single-img:nth-child(odd) {
+            img {
+                border-radius: 135px;
+                border-top-left-radius: 0;
+            }
+        }
+    }
+
+    .gallery-left {
+        .single-img:nth-child(even) {
+            img {
+                border-radius: 135px;
+                border-bottom-right-radius: 0;
+            }
+        }
+    }
+}

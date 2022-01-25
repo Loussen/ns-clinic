@@ -1,0 +1,153 @@
+/*======= Pricing Table =======*/
+.pricing-table {
+    padding: 60px 50px;
+    background-color: $color-primary-07;
+    position: relative;
+    z-index: 1;
+
+    @include respond-below(xl) {
+        padding: 60px 40px;
+    }
+
+    @include respond-below(xs) {
+        padding: 60px 30px;
+    }
+
+    .pricing {
+        &-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        &-icon {
+            max-width: 50px;
+            flex: 0 0 50px;
+            margin-right: 22px;
+
+            @include respond-below(xs) {
+                margin-right: 18px;
+            }
+        }
+
+        &-title {
+            font: {
+                size: 30px;
+                weight: 400;
+            }
+            line-height: 1.3;
+            color: $color-primary;
+
+            @include respond-below(xl) {
+                font-size: 26px;
+            }
+
+            .tagline {
+                display: block;
+                font: {
+                    size: 16px;
+                    weight: 400;
+                    family: $font-inter;
+                }
+                line-height: 1;
+                color: $color-body;
+                margin-top: 8px;
+            }
+        }
+
+        &-price {
+            display: flex;
+            align-items: flex-end;
+            font: {
+                family: $font-lora;
+                size: 50px;
+                weight: 500;
+            }
+            color: $color-heading;
+            line-height: 1;
+
+            @include respond-below(xs) {
+                font-size: 42px;
+            }
+
+            .currency {
+                font: {
+                    size: 20px;
+                    weight: 600;
+                }
+                align-self: flex-start;
+                margin: {
+                    right: 8px;
+                    top: 5px;
+                }
+            }
+
+            .duration {
+                font-size: 20px;
+                color: $color-body;
+                margin: {
+                    left: 10px;
+                    bottom: 8px;
+                }
+            }
+        }
+
+        &-btn {
+            margin-top: 35px;
+
+            .template-btn {
+                padding: 18px 50px;
+
+                @include respond-below(xl) {
+                    padding: 18px 40px;
+                }
+            }
+        }
+
+        &-feature {
+            margin-top: 40px;
+
+            li {
+                color: $color-heading;
+                font: {
+                    size: 16px;
+                    weight: 500;
+                }
+                line-height: 1.5;
+
+                i {
+                    font-size: 13px;
+                    margin-right: 8px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+            }
+        }
+    }
+
+    .featured-tagline {
+        position: absolute;
+        right: 0;
+        top: 0;
+        font: {
+            size: 15px;
+            weight: 600;
+        }
+        color: #fff;
+        text-transform: uppercase;
+        background-color: #ff8400;
+        line-height: 1;
+        writing-mode: vertical-lr;
+        padding: 15px 8px;
+    }
+
+    &.color-2 {
+        background-color: rgba(#9d4327, 0.07);
+    }
+
+    &.color-3 {
+        background-color: rgba(#9e2385, 0.07);
+    }
+}

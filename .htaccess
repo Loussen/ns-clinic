@@ -1,0 +1,55 @@
+Options -Indexes
+AddDefaultCharset utf-8
+
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^home(/?)$ index.php [L,QSA]
+RewriteRule ^haqqimizda(/?)$ index.php?do=haqqimizda [L,QSA]
+RewriteRule ^videoqalereya(/?)$ index.php?do=videoqalereya [L,QSA]
+RewriteRule ^muayine(/?)$ index.php?do=appointment [L,QSA]
+RewriteRule ^reyler(/?)$ index.php?do=comments [L,QSA]
+RewriteRule ^albom(/?)$ index.php?do=albom [L,QSA]
+    RewriteRule ^fotoqalereya/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=fotoqalereya&id=$2 [L,QSA]
+RewriteRule ^pages/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=pages&menu_id=$2 [L,QSA]
+RewriteRule ^xidmetler(/?)$ index.php?do=services [L,QSA]
+	RewriteRule ^xidmet/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=service&id=$2 [L,QSA]
+RewriteRule ^genetik-testler(/?)$ index.php?do=genetik-testler [L,QSA]
+	RewriteRule ^genetik-test/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=genetik-test&id=$2 [L,QSA]
+RewriteRule ^departamentler(/?)$ index.php?do=departments [L,QSA]
+    RewriteRule ^departament/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=department&id=$2 [L,QSA]
+RewriteRule ^hekimlerimiz(/?)$ index.php?do=doctors [L,QSA]
+        RewriteRule ^hekim/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=doctor&id=$2 [L,QSA]
+RewriteRule ^bloq(/?)$ index.php?do=bloq [L,QSA]
+    RewriteRule ^xeber/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=xeber&id=$2 [L,QSA]
+RewriteRule ^elaqe(/?)$ index.php?do=contact [L,QSA]
+RewriteRule ^404(/?)$ index.php?do=404 [L,QSA]
+
+RewriteRule ^sitemap\.xml/?$ sitemap.php
+
+
+RewriteRule ^(az|en|ru)(/?)$ index.php?get_lang_name=$1 [L,QSA]
+RewriteRule ^(az|en|ru)/home(/?)$ index.php?get_lang_name=$1 [L,QSA]
+RewriteRule ^(az|en|ru)/haqqimizda(/?)$ index.php?do=haqqimizda&get_lang_name=$1 [L,QSA]
+RewriteRule ^(az|en|ru)/reyler(/?)$ index.php?do=comments&get_lang_name=$1 [L,QSA]
+RewriteRule ^(az|en|ru)/videoqalereya(/?)$ index.php?do=videoqalereya&get_lang_name=$1 [L,QSA]
+RewriteRule ^(az|en|ru)/muayine(/?)$ index.php?do=appointment&get_lang_name=$1 [L,QSA]
+RewriteRule ^(az|en|ru)/albom(/?)$ index.php?do=albom&get_lang_name=$1 [L,QSA]
+    RewriteRule ^(az|en|ru)/fotoqalereya/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=fotoqalereya&get_lang_name=$1&id=$3 [L,QSA]
+RewriteRule ^(az|en|ru)/pages/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=pages&get_lang_name=$1&menu_id=$3 [L,QSA]
+RewriteRule ^(az|en|ru)/xidmetler(/?)$ index.php?do=services&get_lang_name=$1 [L,QSA]
+	RewriteRule ^(az|en|ru)/xidmet/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=service&get_lang_name=$1&id=$3 [L,QSA]
+RewriteRule ^(az|en|ru)/genetik-testler(/?)$ index.php?do=genetik-testler&get_lang_name=$1 [L,QSA]
+	RewriteRule ^(az|en|ru)/genetik-test/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=genetik-test&get_lang_name=$1&id=$3 [L,QSA]
+RewriteRule ^(az|en|ru)/departamentler(/?)$ index.php?do=departments&get_lang_name=$1 [L,QSA]
+    RewriteRule ^(az|en|ru)/departament/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=department&get_lang_name=$1&id=$3 [L,QSA]
+RewriteRule ^(az|en|ru)/hekimlerimiz(/?)$ index.php?do=doctors&get_lang_name=$1 [L,QSA]
+    RewriteRule ^(az|en|ru)/hekim/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=doctor&get_lang_name=$1&id=$3 [L,QSA]
+RewriteRule ^(az|en|ru)/bloq(/?)$ index.php?do=bloq&get_lang_name=$1 [L,QSA]
+    RewriteRule ^(az|en|ru)/xeber/([0-9a-zA-Züöğıəçşйцукенгшщзхъфывапролджэячсмитьбюё+_-]+)-([0-9]+)(/?)$ index.php?do=xeber&get_lang_name=$1&id=$3 [L,QSA]
+RewriteRule ^(az|en|ru)/elaqe(/?)$ index.php?do=contact&get_lang_name=$1 [L,QSA]
+RewriteRule ^(az|en|ru)/404(/?)$ index.php?do=404&get_lang_name=$1 [L,QSA]
+
+
+ErrorDocument 404 https://fetalmerkeznsgenetics.az/404

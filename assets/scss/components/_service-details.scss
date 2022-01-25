@@ -1,0 +1,176 @@
+/*======= Service Details =======*/
+.service-details-wrapper {
+    padding-left: 70px;
+
+    @include respond-below(xl) {
+        padding-left: 0;
+    }
+
+    .service-title {
+        font-size: 45px;
+        margin-bottom: 30px;
+
+        @include respond-below(lg) {
+            font-size: 38px;
+        }
+
+        @include respond-below(sm) {
+            font-size: 32px;
+        }
+    }
+
+    blockquote {
+        color: $color-primary;
+        font: {
+            family: $font-lora;
+            size: 22px;
+            weight: 500;
+            style: italic;
+        }
+        line-height: 1.6;
+
+        @include respond-below(sm) {
+            font-size: 20px;
+        }
+    }
+
+    .check-list {
+        max-width: 65%;
+
+        @include respond-below(md) {
+            max-width: 100%;
+        }
+    }
+}
+
+/*======= Service Sidebar =======*/
+.service-sidebar {
+    @include respond-below(lg) {
+        margin-top: 80px;
+    }
+
+    .widget {
+        padding: 60px 50px;
+        background-color: $color-secondary;
+
+        @include respond-between(lg, xl) {
+            padding: 60px 30px;
+        }
+
+        @include respond-below(sm) {
+            padding: 60px 40px;
+        }
+
+        @include respond-below(xs) {
+            font-size: 15px;
+            padding: 50px 30px;
+        }
+
+        &:not(:last-child) {
+            margin-bottom: 50px;
+        }
+
+        &:nth-child(even) {
+            background-color: $color-primary;
+        }
+
+        &,
+        a {
+            color: $color-white;
+        }
+
+        .widget-title {
+            font-size: 35px;
+            color: $color-white;
+            text-transform: capitalize;
+            margin-bottom: 30px;
+
+            @include respond-below(xl) {
+                font-size: 26px ;
+            }
+        }
+
+        &.departments-list {
+            li {
+                line-height: 1.5;
+                font: {
+                    size: 18px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 15px;
+                }
+
+                i {
+                    margin-right: 10px;
+                    font-size: 15px;
+                }
+
+                a:hover {
+                    padding-left: 5px;
+                }
+            }
+        }
+
+        &.appointment-form {
+            form {
+                margin-top: 20px;
+            }
+
+            .input-field {
+                margin-top: 10px;
+            }
+
+            input,
+            .nice-select {
+                height: 60px;
+                border-radius: 30px;
+                font: {
+                    size: 16px;
+                    weight: 600;
+                }
+                color: $color-heading;
+
+                &:focus {
+                    border-color: transparent;
+                }
+            }
+
+            .template-btn {
+                height: 60px;
+                width: 100%;
+                line-height: 1;
+                padding: 10px;
+            }
+        }
+
+        &.working-schedule {
+            ul {
+                li {
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+                    line-height: 1.2;
+                    font: {
+                        size: 17px;
+                        weight: 500;
+                    }
+
+                    @include respond-below(xs) {
+                        font-size: 16px;
+                    }
+
+                    &:not(:last-child) {
+                        padding-bottom: 20px;
+                        margin-bottom: 20px;
+                        border-bottom: 2px dashed rgba(#fff, 0.2);
+                    }
+
+                    i {
+                        margin-right: 12px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,79 @@
+/*======= Template Btn =======*/
+.template-btn {
+    font: {
+        size: 17px;
+        weight: 600;
+        family: $font-inter;
+    }
+    line-height: 1.2;
+    background-color: $color-secondary;
+    color: $color-white;
+    transition: all 0.3s;
+    padding: 20px 40px;
+    border-radius: 30px;
+    border: none;
+
+    @include respond-below(sm) {
+        padding: 18px 30px;
+        font-size: 15px;
+    }
+
+    i {
+        font-size: 15px;
+        margin-left: 6px;
+
+        @include respond-below(sm) {
+            font-size: 14px;
+        }
+    }
+
+    &:hover {
+        background-color: $color-heading;
+        color: $color-white;
+    }
+
+    &-bordered {
+        border: 2px solid $color-white;
+        background-color: transparent;
+        color: $color-white;
+        padding: 18px 40px;
+
+        @include respond-below(sm) {
+            padding: 16px 30px;
+        }
+
+        &:hover {
+            border-color: $color-heading;
+        }
+    }
+
+    &-white {
+        background-color: $color-white;
+        color: $color-heading;
+
+        &:hover {
+            background-color: $color-heading;
+            color: $color-white;
+        }
+    }
+
+    &-primary {
+        background-color: $color-primary;
+    }
+
+    &-tertiary {
+        background-color: $color-tertiary;
+
+        &:hover {
+            background-color: $color-fourth;
+        }
+    }
+
+    &-fourth {
+        background-color: $color-fourth;
+
+        &:hover {
+            background-color: $color-tertiary;
+        }
+    }
+}

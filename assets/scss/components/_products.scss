@@ -1,0 +1,304 @@
+/*======= Product Tab =======*/
+.product-tab-nav {
+    position: relative;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        left: -10px;
+        right: -10px;
+        top: -10px;
+        bottom: 30px;
+        background-color: $color-fourth;
+        opacity: 0.06;
+    }
+
+    .nav-tabs {
+        border: none;
+        justify-content: center;
+        background-color: $color-white;
+        padding: 14px 60px;
+
+        @include respond-below(lg) {
+            padding: 14px 30px;
+        }
+
+        @include respond-below(md) {
+            padding: 14px 20px;
+        }
+
+        .nav-link {
+            position: relative;
+            margin: 0;
+            padding: 12px 10px;
+            border: none;
+            border-radius: 0;
+            display: block;
+            text-align: center;
+            line-height: 1;
+            font: {
+                size: 18px;
+                weight: 500;
+            }
+            color: $color-heading;
+
+            @include respond-below(md) {
+                font-size: 15px;
+            }
+
+            &::before
+            {
+                content: "";
+                position: absolute;
+                left: 0;
+                top: 0;
+            }
+
+            span {
+                display: block;
+            }
+
+            .icon {
+                font-size: 35px;
+                color: $color-tertiary;
+                line-height: 0.5;
+                margin-bottom: 10px;
+            }
+        }
+
+        .nav-item {
+            margin: 0 40px;
+
+            @include respond-below(xl) {
+                margin: 0px 20px;
+            }
+
+            @include respond-below(md) {
+                margin: 0px 5px;
+            }
+
+            &:first-child {
+                margin-left: 0;
+            }
+
+            &:last-child {
+                margin-right: 0;
+            }
+        }
+    }
+}
+
+/*======= Product Box =======*/
+.product-box {
+    background-color: $color-white;
+    border: 1px solid rgba(#213360, 0.1);
+    padding: 35px 0;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        background-color: $color-white;
+        opacity: 0;
+        visibility: hidden;
+        transition: 0.3s;
+    }
+
+    .thumbnail {
+        width: 100%;
+        height: 240px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .content {
+        line-height: 1;
+        text-align: center;
+        padding: 0 20px;
+        padding: 30px 30px 0;
+
+        @include respond-below(xl) {
+            padding: 30px 20px 0;
+        }
+
+        .title {
+            font: {
+                size: 20px;
+                weight: 500;
+            }
+            margin-bottom: 8px;
+
+            a:hover {
+                color: $color-tertiary;
+            }
+        }
+
+        .price {
+            font: {
+                size: 16px;
+                weight: 500;
+            }
+        }
+    }
+
+    .action-btns {
+        position: absolute;
+        left: 0;
+        top: 30px;
+        z-index: 2;
+        transition: 0.3s;
+        visibility: hidden;
+        opacity: 0;
+
+        li {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        a {
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 15px;
+            background-color: $color-fourth;
+            color: $color-white;
+            border-radius: 50%;
+
+            &:hover {
+                background-color: $color-tertiary;
+            }
+        }
+    }
+
+    .add-to-cart {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 0;
+        z-index: 2;
+        line-height: 1;
+        font: {
+            size: 15px;
+            weight: 600;
+        }
+        text-transform: capitalize;
+        color: $color-white;
+        background-color: $color-tertiary;
+        border-radius: 25px;
+        width: 170px;
+        padding: 15px 0;
+        text-align: center;
+        transition: 0.3s;
+        visibility: hidden;
+        opacity: 0;
+
+        i {
+            font-size: 14px;
+            margin-left: 5px;
+        }
+
+        &:hover {
+            background-color: $color-fourth;
+        }
+    }
+
+    &:hover {
+        border-color: transparent;
+
+        &::before {
+            visibility: visible;
+            opacity: 0.75;
+        }
+
+        .action-btns {
+            left: 30px;
+            visibility: visible;
+            opacity: 1;
+        }
+
+        .add-to-cart {
+            visibility: visible;
+            opacity: 1;
+            bottom: 40px;
+        }
+    }
+
+    &.product-box-bg {
+        background-color: $color-grey;
+    }
+}
+
+/*======= Product Slider Arrows =======*/
+.product-carousel {
+    .slick-dots {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 70px;
+
+        li {
+            line-height: 1;
+            height: 15px;
+            width: 15px;
+            border-radius: 50%;
+            background-color: $color-fourth;
+            opacity: 0.1;
+            cursor: pointer;
+            position: relative;
+            z-index: 1;
+            margin: 0 5px;
+            transition: 0.3s;
+
+            button {
+                display: none;
+            }
+
+            &.slick-active {
+                background-color: $color-tertiary;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.product-carousel-arrows {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    line-height: 1;
+
+    @include respond-below(xs) {
+        justify-content: flex-start;
+        margin-top: 20px;
+    }
+
+    .slick-arrow {
+        width: 45px;
+        height: 45px;
+        background-color: $color-white;
+        border: 2px solid $color-primary-10;
+        border-radius: 50%;
+        font-size: 15px;
+        transition: 0.3s;
+
+        &.next-arrow,
+        &:hover {
+            margin-left: 10px;
+            background-color: $color-fourth;
+            color: $color-white;
+        }
+    }
+}

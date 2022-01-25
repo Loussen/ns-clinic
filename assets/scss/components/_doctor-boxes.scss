@@ -1,0 +1,543 @@
+/*======= Doctor Boxes One =======*/
+.doctor-box-one {
+    text-align: center;
+    position: relative;
+    padding-bottom: 55px;
+
+    .doctor {
+        &-photo {
+            img {
+                width: 100%;
+            }
+        }
+
+        &-information {
+            position: absolute;
+            left: 40px;
+            right: 40px;
+            bottom: 0;
+            z-index: 2;
+            padding: 25px;
+            background-color: $color-white;
+            box-shadow: 0px 10px 60px 0px rgba(73, 154, 250, 0.1);
+
+            @include respond-between(lg, xl) {
+                left: 20px;
+                right: 20px;
+            }
+
+            @include respond-below(xs) {
+                left: 20px;
+                right: 20px;
+            }
+
+            .name {
+                margin-bottom: 5px;
+                line-height: 1.1;
+                font: {
+                    size: 20px;
+                    weight: 500;
+                }
+            }
+
+            .specialty {
+                color: $color-secondary;
+                font: {
+                    size: 16px;
+                    weight: 500;
+                }
+                line-height: 1;
+            }
+
+            .social-links {
+                margin-top: 10px;
+                display: none;
+
+                li {
+                    margin: 0 2px;
+                    display: inline-block;
+                }
+
+                a {
+                    width: 30px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                    border-radius: 50%;
+                    font-size: 13px;
+                    background-color: $color-primary-10;
+                    color: $color-heading-50;
+
+                    &:hover {
+                        background-color: $color-secondary;
+                        color: $color-white;
+                    }
+                }
+            }
+        }
+    }
+
+    &.bordered-style {
+        padding: 20px 20px 55px;
+        border: 1px solid $color-primary-10;
+
+        .doctor {
+            &-information {
+                padding: 10px 0 0;
+                box-shadow: none;
+                left: 0;
+                right: 0;
+                bottom: 25px;
+                background-color: transparent;
+                background-image: url(../img/doctors/shape.png);
+                background-position: center top;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+/*======= Doctor Boxes Two =======*/
+.doctor-box-two {
+    .doctor {
+        &-photo {
+            position: relative;
+            margin-bottom: 40px;
+            text-align: center;
+
+            img {
+                border-radius: 115px 0 115px 115px;
+            }
+
+            .social-links {
+                position: absolute;
+                left: 0;
+                bottom: -17.5px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: flex-end;
+                overflow: hidden;
+                z-index: 2;
+
+                li {
+                    margin: 0 3px;
+                    transform: translateY(35px);
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 500ms ease 0s;
+
+                    &:first-child,
+                    &:last-child {
+                        margin: 0 0 20px;
+                    }
+
+                    &:nth-child(2) {
+                        transition-delay: 30ms;
+                    }
+
+                    &:nth-child(3) {
+                        transition-delay: 60ms;
+                    }
+
+                    &:nth-child(4) {
+                        transition-delay: 90ms;
+                    }
+                }
+
+                a {
+                    width: 35px;
+                    height: 35px;
+                    line-height: 35px;
+                    text-align: center;
+                    border-radius: 50%;
+                    font-size: 12px;
+                    background-color: $color-primary;
+                    color: $color-white;
+
+                    &:hover {
+                        background-color: $color-secondary;
+                    }
+                }
+            }
+
+            .plus-icon {
+                position: absolute;
+                left: 0;
+                bottom: -22.5px;
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+
+                i {
+                    width: 45px;
+                    height: 45px;
+                    line-height: 45px;
+                    text-align: center;
+                    border-radius: 50%;
+                    font-size: 15px;
+                    background-color: $color-secondary;
+                    color: $color-white;
+                    transition: all 400ms ease 0s;
+                }
+            }
+        }
+
+        &-information {
+            text-align: center;
+
+            .name {
+                margin-bottom: 4px;
+                line-height: 1.1;
+                font: {
+                    size: 20px;
+                    weight: 500;
+                }
+            }
+
+            .specialty {
+                color: $color-secondary;
+                font: {
+                    size: 16px;
+                    weight: 500;
+                }
+                line-height: 1;
+            }
+        }
+    }
+
+    &:hover {
+        .doctor-photo {
+            .social-links {
+                li {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+
+            .plus-icon i {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-45px);
+            }
+        }
+    }
+}
+
+/*======= Doctor Boxes Three =======*/
+.doctor-box-three {
+    text-align: center;
+    padding: 30px 35px;
+    background-color: $color-white;
+    transition: all 0.3s;
+    border-radius: 15px;
+
+    @include respond-below(md) {
+        padding: 30px 25px;
+    }
+
+    .doctor {
+        &-photo {
+            margin-bottom: 30px;
+
+            img {
+                height: 200px;
+                width: 200px;
+                border-radius: 50%;
+                box-shadow: 0px 10px 60px 0px rgba(58, 65, 111, 0.3);
+
+                @include respond-below(md) {
+                    height: 160px;
+                    width: 160px;
+                }
+            }
+        }
+
+        &-information {
+            position: relative;
+
+            .name {
+                margin-bottom: 5px;
+                line-height: 1.1;
+                font: {
+                    size: 24px;
+                    weight: 400;
+                }
+
+                @include respond-below(md) {
+                    font-size: 20px;
+                }
+            }
+
+            .specialty {
+                color: $color-secondary;
+                font: {
+                    size: 16px;
+                    weight: 500;
+                }
+                line-height: 1;
+            }
+
+            .social-links {
+                margin-top: 10px;
+                position: relative;
+                z-index: 1;
+                overflow: hidden;
+
+                li {
+                    margin: 0 2px;
+                    display: inline-block;
+                    transform: translateY(35px);
+                    visibility: hidden;
+                    opacity: 0;
+                    transition: all 500ms ease 0s;
+
+                    &:nth-child(2) {
+                        transition-delay: 30ms;
+                    }
+
+                    &:nth-child(3) {
+                        transition-delay: 60ms;
+                    }
+
+                    &:nth-child(4) {
+                        transition-delay: 90ms;
+                    }
+                }
+
+                a {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    font-size: 14px;
+                    background-color: $color-primary-10;
+                    color: $color-heading-50;
+
+                    @include respond-below(md) {
+                        width: 35px;
+                        height: 35px;
+                        line-height: 35px;
+                        font-size: 13px;
+                    }
+
+                    &:hover {
+                        background-color: $color-secondary;
+                        color: $color-white;
+                    }
+                }
+            }
+
+            .plus-icon {
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                width: 100%;
+                text-align: center;
+                overflow: hidden;
+
+                i {
+                    width: 40px;
+                    height: 40px;
+                    line-height: 40px;
+                    text-align: center;
+                    border-radius: 50%;
+                    font-size: 15px;
+                    background-color: $color-secondary;
+                    color: $color-white;
+                    transition: all 400ms ease 0s;
+
+                    @include respond-below(md) {
+                        width: 35px;
+                        height: 35px;
+                        line-height: 35px;
+                        font-size: 13px;
+                    }
+                }
+            }
+        }
+    }
+
+    &:hover {
+        box-shadow: 0px 10px 60px 0px rgba(73, 154, 250, 0.2);
+
+        .doctor-information {
+            .social-links {
+                li {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: translateY(0);
+                }
+            }
+
+            .plus-icon i {
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(-40px);
+            }
+        }
+    }
+}
+
+/*======= Doctor Bordered Wrapper =======*/
+.doctor-bordered-wrapper {
+    padding: 60px 70px 15px;
+    border: 1px solid $color-primary-10;
+
+    @include respond-below(xl) {
+        padding: 60px 45px 15px;
+    }
+
+    @include respond-below(md) {
+        padding: 60px 30px 15px;
+    }
+}
+
+/*======= Doctor Details =======*/
+.doctor-details-wrapper {
+    .doctor-info-box {
+        display: flex;
+        margin-bottom: 120px;
+
+        @include respond-below(lg) {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 80px;
+        }
+
+        .doctor-photo {
+            flex: 0 0 400px;
+            width: 400px;
+            text-align: center;
+
+            @include respond-below(sm) {
+                flex: 0 0 100%;
+                width: 100%;
+            }
+        }
+
+        .doctor-description {
+            padding: 80px 70px;
+            background-color: #f2f8ff;
+
+            @include respond-below(lg) {
+                padding: 80px 40px;
+            }
+
+            @include respond-below(sm) {
+                padding: 60px 30px;
+            }
+
+            .description-header {
+                margin-bottom: 35px;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                line-height: 1;
+
+                @include respond-between(lg, xl) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+
+                @include respond-below(md) {
+                    flex-direction: column;
+                    align-items: flex-start;
+                }
+            }
+
+            .name {
+                font: {
+                    size: 30px;
+                    weight: 500;
+                }
+                margin-bottom: 10px;
+            }
+
+            .specialty {
+                color: $color-secondary;
+            }
+
+            .template-btn {
+                @include respond-between(lg, xl) {
+                    margin-top: 40px;
+                }
+
+                @include respond-below(md) {
+                    margin-top: 40px;
+                    padding: 18px 30px;
+                }
+            }
+        }
+    }
+
+    .doctor-information {
+        ul {
+            li {
+                display: flex;
+                font-size: 18px;
+                line-height: 1.8;
+
+                @include respond-below(xs) {
+                    font-size: 16px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 20px;
+                }
+
+                .info-title {
+                    flex: 0 0 45%;
+                    margin-right: 20px;
+
+                    @include respond-below(xs) {
+                        flex: 0 0 35%;
+                    }
+                }
+
+                .info-desc {
+                    color: $color-heading;
+                }
+            }
+        }
+    }
+
+    .working-hour-table {
+        padding: 60px;
+        border: 1px solid $color-primary-10;
+
+        @include respond-below(sm) {
+            padding: 40px;
+        }
+
+        @include respond-below(xs) {
+            padding: 40px 20px;
+        }
+
+        ul {
+            li {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                line-height: 1;
+                font-size: 17px;
+                color: $color-body;
+
+                @include respond-below(xs) {
+                    font-size: 15px;
+                }
+
+                &:not(:last-child) {
+                    margin-bottom: 22px;
+                }
+
+                .closed {
+                    color: #ff0054;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

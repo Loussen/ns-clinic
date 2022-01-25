@@ -1,0 +1,92 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../fonts/flaticon.ttf") format("truetype"),
+        url("../fonts/flaticon.woff") format("woff"),
+        url("../fonts/flaticon.woff2") format("woff2"),
+        url("../fonts/flaticon.eot") format("embedded-opentype"),
+        url("../fonts/flaticon.svg") format("svg");
+}
+
+i[class^="flaticon-"],
+i[class*=" flaticon-"] {
+    display: inline-block;
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    text-rendering: auto;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-back-in-time:before {
+    content: "\f101";
+}
+.flaticon-medicine:before {
+    content: "\f102";
+}
+.flaticon-stethoscope:before {
+    content: "\f103";
+}
+.flaticon-flask:before {
+    content: "\f104";
+}
+.flaticon-eye:before {
+    content: "\f105";
+}
+.flaticon-pills:before {
+    content: "\f106";
+}
+.flaticon-virus:before {
+    content: "\f107";
+}
+.flaticon-pills-1:before {
+    content: "\f108";
+}
+.flaticon-email:before {
+    content: "\f109";
+}
+.flaticon-clock:before {
+    content: "\f10a";
+}
+.flaticon-phone-call:before {
+    content: "\f10b";
+}
+.flaticon-dental-care:before {
+    content: "\f10c";
+}
+.flaticon-dental-care-1:before {
+    content: "\f10d";
+}
+.flaticon-dental-care-2:before {
+    content: "\f10e";
+}
+.flaticon-checkup:before {
+    content: "\f10f";
+}
+.flaticon-tooth-1:before {
+    content: "\f110";
+}
+.flaticon-tooth-2:before {
+    content: "\f111";
+}
+.flaticon-dentures:before {
+    content: "\f112";
+}
+.flaticon-tooth-3:before {
+    content: "\f113";
+}
+.flaticon-tooth-4:before {
+    content: "\f114";
+}
+.flaticon-drilling:before {
+    content: "\f115";
+}
+.flaticon-teeth:before {
+    content: "\f116";
+}
+.flaticon-quotation:before {
+    content: "\f117";
+}
