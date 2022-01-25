@@ -1,67 +1,102 @@
-<!-- Footer -->
-<footer id="footer" class="footer mediku-footer bg-theme-colored2" data-tm-bg-img="<?=SITE_PATH?>/assets/images//footer-bg.png">
-	<div class="footer-widget-area">
-		<div class="container pt-90 pb-20">
-			<div class="row">
-				<div class="col-md-6 col-lg-6 col-xl-4 pl-0 pl-lg-15">
-					<div class="widget tm-widget-contact-info contact-info-style1 contact-icon-theme-colored1">
-						<h4 class="widget-title"><?=$lang17?></h4>
-						<div class="description"><?=substr_($info_contacts['footer_'.$lang_name],0,200,true,true)?></div>
-						<ul class="styled-icons icon-dark icon-md icon-theme-colored1 icon-circled clearfix">
-							<li><a class="social-link" href="<?=$info_contacts['facebook']?>" ><i class="fab fa-facebook"></i></a></li>
-							<li><a class="social-link" href="<?=$info_contacts['youtube']?>" ><i class="fab fa-youtube"></i></a></li>
-							<li><a class="social-link" href="<?=$info_contacts['instagram']?>" ><i class="fab fa-instagram"></i></a></li>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 col-xl-4">
-					<div class="widget widget_nav_menu split-nav-menu clearfix">
-						<h4 class="widget-title"><?=$lang50?></h4>
-						<ul class="menu">
-                            <?php
-                            $footer_menu_1 = mysqli_query($db, "select * from menus where active=1 order by position");
+<!--====== Back to Top Start ======-->
+<a class="back-to-top" href="#">
+	<i class="far fa-angle-up"></i>
+</a>
+<!--====== Back to Top End ======-->
 
-                            while($row = mysqli_fetch_assoc($footer_menu_1))
-                            {
-                                if (trim($row["link"]) != '' && trim($row["link"]) != '#')
-                                {
-                                    $href = $site . '/' . $row["link"];
-                                    ?>
-									<li><a href="<?=$href?>"> <?=$row['name_'.$lang_name]?></a></li>
-                                    <?php
-                                }
-                            }
-                            ?>
-						</ul>
-					</div>
-				</div>
-				<div class="col-md-6 col-lg-6 col-xl-4">
-					<div class="widget widget-contact clearfix mb-0 mt-lg-40">
-						<h4 class="widget-title"><?=$lang16?></h4>
-						<div class="tm-widget tm-widget-contact">
-							<ul class="contact-info">
-								<li class="contact-address"><i class="fas fa-map-marked-alt font-icon sm-display-block text-theme-colored1 mr-10"></i> <?=$info_contacts['text_'.$lang_name]?></li>
-								<li class="contact-email"><i class="fas fa-envelope font-icon sm-display-block text-theme-colored1 mr-10"></i> <?=$info_contacts['email']?></li>
-								<li class="contact-phone"><i class="fas fa-phone font-icon sm-display-block text-theme-colored1 mr-10"></i> Tel: <?=$info_contacts['phone']?></li>
-							</ul>
-							<div class="tm-sc-button">
-								<a href="<?=SITE_PATH?>/elaqe" style="color: #fff;" class="btn btn-theme-colored1 tm-mediku-btn btn-flat"><?=$lang9?></a>
+<!--====== Start Template Footer ======-->
+<footer class="template-footer have-cta-boxed-one">
+	<div class="footer-inner bg-color-grey">
+		<div class="container">
+			<div class="footer-widgets">
+				<div class="row">
+					<div class="col-lg-3 col-md-8">
+						<div class="widget text-widget">
+							<div class="footer-logo">
+								<img src="<?=SITE_PATH?>/assets/img/logo.png" alt="Medibo">
 							</div>
+							<p>
+								Sed ut perspi unde omniste natus error sit voluptatem acc doloremque laudantium
+							</p>
+							<ul class="contact-list">
+								<li>
+									<a href="https://goo.gl/maps/inpkL6wUZqMR3opX7"><i class="far fa-map-marker-alt"></i>55 Main Road, USA</a>
+								</li>
+								<li>
+									<a href="mailto:support@gmail.com"><i class="far fa-envelope"></i>support@gmail.com</a>
+								</li>
+								<li>
+									<a href="tel:01267899"><i class="far fa-phone"></i>+012 (345) 678 99</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-lg-6">
+						<div class="row">
+							<div class="col-xl-5 col-md-6">
+								<div class="widget nav-widget">
+									<h4 class="widget-title">Popular Services</h4>
+									<ul class="nav-links">
+										<li><a href="#">Orthopedic Care</a></li>
+										<li><a href="#">Gynecology Care</a></li>
+										<li><a href="#">Cardiology Care</a></li>
+										<li><a href="#">Dentistry Care</a></li>
+										<li><a href="#">Gastroenterology</a></li>
+										<li><a href="#">Urgent Care</a></li>
+									</ul>
+								</div>
+							</div>
+							<div class="col-xl-7 col-md-6">
+								<div class="widget instagram-widget">
+									<h4 class="widget-title">Photo Gallery</h4>
+									<div class="instagram-images">
+										<div class="single-image">
+											<img src="<?=SITE_PATH?>/assets/img/instagram/01.jpg" alt="Instagram">
+											<a href="#"><i class="fab fa-instagram"></i></a>
+										</div>
+										<div class="single-image">
+											<img src="<?=SITE_PATH?>/assets/img/instagram/02.jpg" alt="Instagram">
+											<a href="#"><i class="fab fa-instagram"></i></a>
+										</div>
+										<div class="single-image">
+											<img src="<?=SITE_PATH?>/assets/img/instagram/03.jpg" alt="Instagram">
+											<a href="#"><i class="fab fa-instagram"></i></a>
+										</div>
+										<div class="single-image">
+											<img src="<?=SITE_PATH?>/assets/img/instagram/04.jpg" alt="Instagram">
+											<a href="#"><i class="fab fa-instagram"></i></a>
+										</div>
+										<div class="single-image">
+											<img src="<?=SITE_PATH?>/assets/img/instagram/05.jpg" alt="Instagram">
+											<a href="#"><i class="fab fa-instagram"></i></a>
+										</div>
+										<div class="single-image">
+											<img src="<?=SITE_PATH?>/assets/img/instagram/06.jpg" alt="Instagram">
+											<a href="#"><i class="fab fa-instagram"></i></a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-lg-3 col-md-10">
+						<div class="widget newsletters-widget">
+							<h4 class="widget-title">Newsletters</h4>
+							<p>
+								Sed ut perspiciatis unde omniste <br> natus error sit voluptatem
+							</p>
+							<form action="#" class="newsletters-form">
+								<input type="email" placeholder="Email Address">
+								<button type="submit"><i class="far fa-arrow-right"></i></button>
+							</form>
 						</div>
 					</div>
 				</div>
 			</div>
-		</div>
-		<div class="footer-bottom">
-			<div class="container footer-bottom-border-top">
-				<div class="row justify-content-center pt-20 pb-20">
-					<div class="col-lg-8">
-						<div class="footer-paragraph text-center">
-							© Copyright <?=date('Y')?>
-						</div>
-					</div>
-				</div>
+			<div class="copyright-area">
+				<p>© 2021 <a href="#">Seeva</a>. All Rights Reserved</p>
 			</div>
 		</div>
 	</div>
 </footer>
+<!--====== End Template Footer ======-->

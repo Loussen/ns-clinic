@@ -1,24 +1,25 @@
 <?php if(!defined('db_name')) { header("Location: ../"); exit(); die(); } ?>
 
-<!-- Javascript -->
-<!-- external javascripts -->
-<script src="<?=SITE_PATH?>/assets/js/jquery.js"></script>
-<script src="<?=SITE_PATH?>/assets/js/popper.min.js"></script>
+<!--====== Jquery ======-->
+<script src="<?=SITE_PATH?>/assets/js/jquery-3.6.0.min.js"></script>
+<!--====== Bootstrap ======-->
 <script src="<?=SITE_PATH?>/assets/js/bootstrap.min.js"></script>
-<script src="<?=SITE_PATH?>/assets/js/javascript-plugins-bundle.js"></script>
-<script src="<?=SITE_PATH?>/assets/js/menuzord/js/menuzord.js"></script>
-<!-- Slick slider JS-->
+<!--====== Slick slider ======-->
 <script src="<?=SITE_PATH?>/assets/js/slick.min.js"></script>
-<!-- REVOLUTION STYLE SHEETS -->
-<link rel="stylesheet" type="text/css" href="<?=SITE_PATH?>/assets/js/revolution-slider/css/rs6.css">
-<link rel="stylesheet" type="text/css" href="<?=SITE_PATH?>/assets/js/revolution-slider/extra-rev-slider1.css">
-<!-- REVOLUTION LAYERS STYLES -->
-<!-- REVOLUTION JS FILES -->
-<script src="<?=SITE_PATH?>/assets/js/revolution-slider/js/revolution.tools.min.js"></script>
-<script src="<?=SITE_PATH?>/assets/js/revolution-slider/js/rs6.min.js"></script>
-<script src="<?=SITE_PATH?>/assets/js/revolution-slider/extra-rev-slider1.js"></script>
-
-<script src="<?=SITE_PATH?>/assets/js/custom.js"></script>
+<!--====== Isotope ======-->
+<script src="<?=SITE_PATH?>/assets/js/isotope.pkgd.min.js"></script>
+<!--====== Images loaded ======-->
+<script src="<?=SITE_PATH?>/assets/js/imagesloaded.pkgd.min.js"></script>
+<!--====== In-view ======-->
+<script src="<?=SITE_PATH?>/assets/js/jquery.inview.min.js"></script>
+<!--====== Nice Select ======-->
+<script src="<?=SITE_PATH?>/assets/js/jquery.nice-select.min.js"></script>
+<!--====== Magnific Popup ======-->
+<script src="<?=SITE_PATH?>/assets/js/magnific-popup.min.js"></script>
+<!--====== WOW Js ======-->
+<script src="<?=SITE_PATH?>/assets/js/wow.min.js"></script>
+<!--====== Main JS ======-->
+<script src="<?=SITE_PATH?>/assets/js/main.js"></script>
 
 
 <?php echo $js; ?>
@@ -138,49 +139,5 @@ jQuery(document).ready(function(){
             $(this).closest("div.youtube-video-place").html('<iframe allowfullscreen frameborder="0" class="embed-responsive-item" style="height: 225px; width: 100%;" src="' + $(this).closest("div.youtube-video-place").data('yt-url') + '"></iframe>');
         });
     }
-
-    /*------------------------------------------------------------------------------*/
-    /* Slick_slider
-    /*------------------------------------------------------------------------------*/
-    $(".slick_slider").slick({
-        speed: 1000,
-        infinite: true,
-        arrows: false,
-        dots: false,
-        autoplay: false,
-        centerMode : false,
-
-        responsive: [{
-
-            breakpoint: 1360,
-            settings: {
-                slidesToShow: 3,
-                slidesToScroll: 3
-            }
-        },
-            {
-
-                breakpoint: 1024,
-                settings: {
-                    slidesToShow: 3,
-                    slidesToScroll: 3
-                }
-            },
-            {
-
-                breakpoint: 680,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 2
-                }
-            },
-            {
-                breakpoint: 575,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1
-                }
-            }]
-    });
 });
 </script>

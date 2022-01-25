@@ -1,5 +1,6 @@
-<meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="<?=$siteDescription?>"/>
 <meta name="keywords" content="<?=$siteKeywords?>"/>
 <meta name="og:title" content="<?=$siteTitle?>"/>
@@ -32,25 +33,21 @@
 <meta name="theme-color" content="#ffffff">
 
 <!-- Stylesheet -->
-<link href="<?=SITE_PATH?>/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
-<link href="<?=SITE_PATH?>/assets/css/animate.min.css" rel="stylesheet" type="text/css">
-<link href="<?=SITE_PATH?>/assets/css/javascript-plugins-bundle.css" rel="stylesheet"/>
-
-<!-- Slick slider style -->
-<link href="<?=SITE_PATH?>/assets/css/slick.css" rel="stylesheet"/>
-
-<!-- CSS | menuzord megamenu skins -->
-<link href="<?=SITE_PATH?>/assets/js/menuzord/css/menuzord.css" rel="stylesheet"/>
-
-<!-- CSS | Main style file -->
-<link href="<?=SITE_PATH?>/assets/css/style-main.css" rel="stylesheet" type="text/css">
-<link id="menuzord-menu-skins" href="<?=SITE_PATH?>/assets/css/menuzord-skins/menuzord-rounded-boxed.css" rel="stylesheet"/>
-
-<!-- CSS | Responsive media queries -->
-<link href="<?=SITE_PATH?>/assets/css/responsive.css" rel="stylesheet" type="text/css">
-<!-- CSS | Style css. This is the file where you can place your own custom css code. Just uncomment it and use it. -->
-
-<!-- CSS | Theme Color -->
-<link href="<?=SITE_PATH?>/assets/css/colors/theme-skin-color-set1.css" rel="stylesheet" type="text/css">
+<!--====== Animate Css ======-->
+<link rel="stylesheet" href="<?=SITE_PATH?>/assets/css/animate.min.css" />
+<!--====== Bootstrap css ======-->
+<link rel="stylesheet" href="<?=SITE_PATH?>/assets/css/bootstrap.min.css" />
+<!--====== Slick Slider ======-->
+<link rel="stylesheet" href="<?=SITE_PATH?>/assets/css/slick.min.css" />
+<!--====== Nice Select ======-->
+<link rel="stylesheet" href="<?=SITE_PATH?>/assets/css/nice-select.min.css" />
+<!--====== Magnific Popup ======-->
+<link rel="stylesheet" href="<?=SITE_PATH?>/assets/css/magnific-popup.min.css" />
+<!--====== Font Awesome ======-->
+<link rel="stylesheet" href="<?=SITE_PATH?>/assets/fonts/fontawesome/css/all.min.css" />
+<!--====== Flaticon ======-->
+<link rel="stylesheet" href="<?=SITE_PATH?>/assets/fonts/flaticon/css/flaticon.css" />
+<!--====== Main Css ======-->
+<link rel="stylesheet" href="<?=SITE_PATH?>/assets/css/style.css" />
 
 

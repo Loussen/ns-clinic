@@ -15,6 +15,28 @@
 //			$hour=date("H:i",$information["datetime"]);
 //		}
 		?>
+
+        <?php
+	        $sql=mysqli_query($db,"select id,name from langs order by position");
+	        $inc=1;
+	        while($row=mysqli_fetch_assoc($sql))
+	        {
+	            echo '<div role="tabpanel" class="tab-pane lang-panel" id="tab_lang'.$row["id"].'">';
+
+	            echo ' <h2 style="text-align: center; text-decoration: underline; font-weight: bold;">Dil üzrə dəyişən xanalar</h2>
+					<div class="form-group row">
+						<label for="example-text-input" class="col-md-2 col-form-label">Başlıq:</label>
+						<div class="col-md-10">
+							<input name="name_'.decode_text($row["name"]).'" class="form-control" type="text" value="'.decode_text($information["name_".$row["name"]]).'" />
+						</div>
+					</div>
+				
+					';
+
+	            echo '</div>';
+	        }
+        ?>
+
 		<div class="form-group row hide">
 			<label for="example-text-input" class="col-md-2 col-form-label">Tarix:</label>
 			<div class="col-md-10">
@@ -59,27 +81,6 @@
 				<input name="video_url" class="form-control" type="text" value="<?php echo decode_text($information["video_url"])?>" />
 			</div>
 		</div>
-
-		<?php
-		$sql=mysqli_query($db,"select id,name from langs order by position");
-		$inc=1;
-		while($row=mysqli_fetch_assoc($sql))
-		{
-			echo '<div role="tabpanel" class="tab-pane" id="tab_lang'.$row["id"].'">';
-			
-				echo '
-				<div class="form-group row">
-					<label for="example-text-input" class="col-md-2 col-form-label">Başlıq:</label>
-					<div class="col-md-10">
-						<input name="name_'.decode_text($row["name"]).'" class="form-control" type="text" value="'.decode_text($information["name_".$row["name"]]).'" />
-					</div>
-				</div>
-			
-				';
-			
-			echo '</div>';
-		}
-		?>
 		
 		<?php $submit_value='Yadda saxla'; include "pages/__tools/submit_button.php"; ?>
 	</div>

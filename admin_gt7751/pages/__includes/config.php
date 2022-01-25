@@ -16,9 +16,9 @@ if(function_exists('date_default_timezone_set')) date_default_timezone_set($time
 if(!defined('host')) define('host','localhost');
 if(!defined('username')) define('username','root');
 if(!defined('password')) define('password','');
-if(!defined('db_name')) define('db_name','fetal');
+if(!defined('db_name')) define('db_name','nsclinic');
 $admin_folder='admin_gt7751';
-$site="https://localhost/fetal";	// sonda / iwaresi qoyulmasin ve admin_folder burada qeyd edilmesin. ondan 1 vahid onceki foldere qeder qeyd edilsin.
+$site="http://localhost/nsclinic";	// sonda / iwaresi qoyulmasin ve admin_folder burada qeyd edilmesin. ondan 1 vahid onceki foldere qeder qeyd edilsin.
 
 $time=time();	//$time+=3600;	// eger saat 1 saat + ve ya - olarsa tenzimle.
 $cookieExpire=21600;

@@ -28,36 +28,27 @@ $Name='name_'.$lang_name;
 require_once "includes/controller.php";
 ?>
 <!DOCTYPE html>
-<html dir="ltr" lang="en">
+<html lang="en">
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-NSGXHD4Q16"></script>
-	<script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments);}
-        gtag('js', new Date());
-
-        gtag('config', 'G-NSGXHD4Q16');
-	</script>
 	<?php require_once "includes/head.php"; ?>
 </head>
-<body class="container-1340px has-side-panel side-panel-right">
+<body>
 
-	<div class="side-panel-body-overlay"></div>
-
-    <?php require_once "includes/sidebar.php" ?>
-
-	<div id="wrapper" class="clearfix">
-
-	    <?php require_once "includes/top.php" ?>
-
-		<div class="main-content-area">
-	        <?php require_once "includes/pages/".$do.".php"; ?>
+	<!--====== Start Preloader ======-->
+	<div id="preloader">
+		<div id="loading-center">
+			<div id="object"></div>
 		</div>
-
-	    <?php require_once "includes/footer.php" ?>
-
 	</div>
+	<!--====== End Preloader ======-->
+
+    <?php require_once "includes/top.php" ?>
+
+	<div class="main-content-area">
+        <?php require_once "includes/pages/".$do.".php"; ?>
+	</div>
+
+    <?php require_once "includes/footer.php" ?>
 
 	<?php require_once "includes/js.php"; ?>
 
