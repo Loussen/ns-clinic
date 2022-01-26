@@ -17,8 +17,8 @@
                 <th>Telefon</th>
                 <th>Email</th>
                 <th>Başlıq</th>
-                <th>Müayinə növü</th>
-                <th>Seçim</th>
+<!--                <th>Müayinə növü</th>-->
+<!--                <th>Seçim</th>-->
                 <th>Mətn</th>
                 <th>Tarix</th>
             </tr>
@@ -29,8 +29,8 @@
                 <td><?php echo $information["phone"]; ?></td>
                 <td><?php echo $information["email"]; ?></td>
                 <td><?php echo $information["subject"]; ?></td>
-                <td><?php echo $information["appointment_type"] == 1 ? 'Həkim' : 'Laboratoriya'; ?></td>
-                <td><?php echo $row_check["name"]; ?></td>
+<!--                <td>--><?php //echo $information["appointment_type"] == 1 ? 'Həkim' : 'Laboratoriya'; ?><!--</td>-->
+<!--                <td>--><?php //echo $row_check["name"]; ?><!--</td>-->
                 <td><?php echo $information["message"]; ?></td>
                 <td><?php echo $information["datetime"]; ?></td>
             </tr>

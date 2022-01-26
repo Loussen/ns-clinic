@@ -28,9 +28,8 @@ $page_title="Pasiyentlər (Video FB)";
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th style="width:20%"><?php echo $input_allcheckbox?>Pasiyent adı</th>
-								<th style="width:20%">Başlıq</th>
-								<th style="width:30%">Video</th>
+								<th style="width:20%"><?php echo $input_allcheckbox?>Pasiyentin adı</th>
+								<th style="width:20%">Pasiyentin fikri</th>
 								<th style="width:30%" class="print_hide">Alətlər</th>
 							</tr>
 						</thead>
@@ -43,10 +42,7 @@ $page_title="Pasiyentlər (Video FB)";
                                 {
                                     echo '<tr>
                                             <td>'.checkbox_row($row["id"]).' '.decode_text($row[$Name]).'</td>
-                                            <td>'.decode_text($row['title_'.$lang_name]).'</td>
-                                            <td>
-                                                <a target="_blank" href="'.$row['video_url'].'">Link ('.$row['video_url'].')</a>
-                                            </td>
+                                            <td>'.decode_text($row['text_'.$lang_name]).'</td>
                                             <td class="print_hide">'.rowButtons().'</td>
                                         </tr>';
                                 }

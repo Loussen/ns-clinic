@@ -7,7 +7,7 @@ checkFolderIsset($imageFolder);
 
 if(isset($_POST["submit_insert_update"]) && check_csrf_(safe($_POST["csrf_"]),$do) && $settings_inner["edit_available"]>0 )
 {
-	$datas_post=array('name','short_text','full_text','slogan');
+	$datas_post=array('name','full_text');
 	include "pages/__tools/check_post_datas.php";
 
 	if($error==''){

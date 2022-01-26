@@ -10,91 +10,93 @@
 		<div class="container">
 			<div class="footer-widgets">
 				<div class="row">
-					<div class="col-lg-3 col-md-8">
+					<div class="col-lg-5 col-md-7">
 						<div class="widget text-widget">
 							<div class="footer-logo">
-								<img src="<?=SITE_PATH?>/assets/img/logo.png" alt="Medibo">
+								<img src="<?=SITE_PATH?>/assets/img/logo.png" alt="<?=$info_about['name_'.$lang_name]?>">
 							</div>
 							<p>
-								Sed ut perspi unde omniste natus error sit voluptatem acc doloremque laudantium
+                                <?=substr_($info_contacts['footer_'.$lang_name],0,400,true,true)?>
 							</p>
-							<ul class="contact-list">
-								<li>
-									<a href="https://goo.gl/maps/inpkL6wUZqMR3opX7"><i class="far fa-map-marker-alt"></i>55 Main Road, USA</a>
-								</li>
-								<li>
-									<a href="mailto:support@gmail.com"><i class="far fa-envelope"></i>support@gmail.com</a>
-								</li>
-								<li>
-									<a href="tel:01267899"><i class="far fa-phone"></i>+012 (345) 678 99</a>
-								</li>
-							</ul>
+
 						</div>
 					</div>
-					<div class="col-lg-6">
+					<div class="col-lg-7 col-md-5">
 						<div class="row">
-							<div class="col-xl-5 col-md-6">
+							<div class="col-xl-6 col-md-6">
 								<div class="widget nav-widget">
-									<h4 class="widget-title">Popular Services</h4>
+									<h4 class="widget-title"><?=$lang25?></h4>
 									<ul class="nav-links">
-										<li><a href="#">Orthopedic Care</a></li>
-										<li><a href="#">Gynecology Care</a></li>
-										<li><a href="#">Cardiology Care</a></li>
-										<li><a href="#">Dentistry Care</a></li>
-										<li><a href="#">Gastroenterology</a></li>
-										<li><a href="#">Urgent Care</a></li>
+									<?php
+                                        $footer_menu_1 = mysqli_query($db, "select * from menus where active=1 order by position");
+
+	                                    while($row = mysqli_fetch_assoc($footer_menu_1))
+	                                    {
+		                                    if (trim($row["link"]) != '' && trim($row["link"]) != '#')
+		                                    {
+		                                        $href = $site . '/' . $row["link"];
+		                                        ?>
+			                                    <li><a href="<?=$href?>"><?=$row['name_'.$lang_name]?></a></li>
+		                                        <?php
+		                                    }
+	                                    }
+									?>
 									</ul>
 								</div>
 							</div>
-							<div class="col-xl-7 col-md-6">
-								<div class="widget instagram-widget">
-									<h4 class="widget-title">Photo Gallery</h4>
-									<div class="instagram-images">
-										<div class="single-image">
-											<img src="<?=SITE_PATH?>/assets/img/instagram/01.jpg" alt="Instagram">
-											<a href="#"><i class="fab fa-instagram"></i></a>
-										</div>
-										<div class="single-image">
-											<img src="<?=SITE_PATH?>/assets/img/instagram/02.jpg" alt="Instagram">
-											<a href="#"><i class="fab fa-instagram"></i></a>
-										</div>
-										<div class="single-image">
-											<img src="<?=SITE_PATH?>/assets/img/instagram/03.jpg" alt="Instagram">
-											<a href="#"><i class="fab fa-instagram"></i></a>
-										</div>
-										<div class="single-image">
-											<img src="<?=SITE_PATH?>/assets/img/instagram/04.jpg" alt="Instagram">
-											<a href="#"><i class="fab fa-instagram"></i></a>
-										</div>
-										<div class="single-image">
-											<img src="<?=SITE_PATH?>/assets/img/instagram/05.jpg" alt="Instagram">
-											<a href="#"><i class="fab fa-instagram"></i></a>
-										</div>
-										<div class="single-image">
-											<img src="<?=SITE_PATH?>/assets/img/instagram/06.jpg" alt="Instagram">
-											<a href="#"><i class="fab fa-instagram"></i></a>
-										</div>
-									</div>
+							<div class="col-xl-6 col-md-6">
+								<div class="widget text-widget">
+									<h4 class="widget-title"><?=$lang26?></h4>
+									<ul class="contact-list">
+										<li>
+											<a href="https://goo.gl/maps/inpkL6wUZqMR3opX7"><i class="far fa-map-marker-alt"></i><?=$info_contacts['text_'.$lang_name]?></a>
+										</li>
+										<li>
+											<a href="mailto:<?=$info_contacts['email']?>"><i class="far fa-envelope"></i><?=$info_contacts['email']?></a>
+										</li>
+										<li>
+											<a href="tel:<?=$info_contacts['phone']?>"><i class="far fa-phone"></i><?=$info_contacts['phone']?></a>
+										</li>
+									</ul>
 								</div>
 							</div>
-						</div>
-					</div>
-					<div class="col-lg-3 col-md-10">
-						<div class="widget newsletters-widget">
-							<h4 class="widget-title">Newsletters</h4>
-							<p>
-								Sed ut perspiciatis unde omniste <br> natus error sit voluptatem
-							</p>
-							<form action="#" class="newsletters-form">
-								<input type="email" placeholder="Email Address">
-								<button type="submit"><i class="far fa-arrow-right"></i></button>
-							</form>
+<!--							<div class="col-xl-6 col-md-6">-->
+<!--								<div class="widget instagram-widget">-->
+<!--									<h4 class="widget-title">Photo Gallery</h4>-->
+<!--									<div class="instagram-images">-->
+<!--										<div class="single-image">-->
+<!--											<img src="--><?//=SITE_PATH?><!--/assets/img/instagram/01.jpg" alt="Instagram">-->
+<!--											<a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--										</div>-->
+<!--										<div class="single-image">-->
+<!--											<img src="--><?//=SITE_PATH?><!--/assets/img/instagram/02.jpg" alt="Instagram">-->
+<!--											<a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--										</div>-->
+<!--										<div class="single-image">-->
+<!--											<img src="--><?//=SITE_PATH?><!--/assets/img/instagram/03.jpg" alt="Instagram">-->
+<!--											<a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--										</div>-->
+<!--										<div class="single-image">-->
+<!--											<img src="--><?//=SITE_PATH?><!--/assets/img/instagram/04.jpg" alt="Instagram">-->
+<!--											<a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--										</div>-->
+<!--										<div class="single-image">-->
+<!--											<img src="--><?//=SITE_PATH?><!--/assets/img/instagram/05.jpg" alt="Instagram">-->
+<!--											<a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--										</div>-->
+<!--										<div class="single-image">-->
+<!--											<img src="--><?//=SITE_PATH?><!--/assets/img/instagram/06.jpg" alt="Instagram">-->
+<!--											<a href="#"><i class="fab fa-instagram"></i></a>-->
+<!--										</div>-->
+<!--									</div>-->
+<!--								</div>-->
+<!--							</div>-->
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="copyright-area">
-				<p>© 2021 <a href="#">Seeva</a>. All Rights Reserved</p>
+				<p>© <?=date('Y')." ".$lang27?></p>
 			</div>
 		</div>
 	</div>

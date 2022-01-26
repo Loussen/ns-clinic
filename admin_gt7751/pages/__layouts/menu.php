@@ -34,18 +34,15 @@
 			<li><a href="index.php?do=description" class="waves-effect"><i class="fa fa-list-alt fa-lg"></i> <span class="hide-menu">Description</span></a></li>
 			<li><a href="index.php?do=menus" class="waves-effect"><i class="fa fa-navicon fa-lg"></i> <span class="hide-menu">Menyular</span></a></li>
 			<li><a href="index.php?do=about" class="waves-effect"><i class="fa fa-newspaper-o fa-lg"></i> <span class="hide-menu">Haqqımızda</span></a></li>
-			<li><a href="index.php?do=departments" class="waves-effect"><i class="fa fa-building fa-lg"></i> <span class="hide-menu">Departamentlər</span></a></li>
-			<li><a href="index.php?do=doctors" class="waves-effect"><i class="fa fa-users fa-lg"></i> <span class="hide-menu">Həkimlər</span></a></li>
+			<li><a href="index.php?do=why_choose" class="waves-effect"><i class="fa fa-newspaper-o fa-lg"></i> <span class="hide-menu">Nə üçün biz?</span></a></li>
 			<li><a href="index.php?do=photo_albums" class="waves-effect"><i class="fa fa-file-image-o fa-lg"></i> <span class="hide-menu">Fotoqalereya</span></a></li>
 			<li><a href="index.php?do=videogallery" class="waves-effect"><i class="fa fa-file-video-o fa-lg"></i> <span class="hide-menu">Videoqalereya</span></a></li>
-			<li><a href="index.php?do=patients" class="waves-effect"><i class="fa fa-users fa-lg"></i> <span class="hide-menu">Pasiyentlər (Video FB)</span></a></li>
-			<li><a href="index.php?do=faq" class="waves-effect"><i class="fa fa-headphones fa-lg"></i> <span class="hide-menu">FAQ</span></a></li>
+			<li><a href="index.php?do=patients" class="waves-effect"><i class="fa fa-users fa-lg"></i> <span class="hide-menu">Pasiyentlərin fikirləri</span></a></li>
 			<li><a href="index.php?do=sliders" class="waves-effect"><i class="fa fa-sliders fa-lg"></i> <span class="hide-menu">Slider</span></a></li>
 			<li><a href="index.php?do=contacts" class="waves-effect"><i class="fa fa-mobile fa-lg"></i> <span class="hide-menu">Əlaqə</span></a></li>
-			<li><a href="index.php?do=partners" class="waves-effect"><i class="fa fa-slideshare fa-lg"></i> <span class="hide-menu">Partnyorlar</span></a></li>
 			<li><a href="index.php?do=services" class="waves-effect"><i class="fa fa-stack-exchange fa-lg"></i> <span class="hide-menu">Xidmətlərimiz</span></a></li>
 			<li><a href="index.php?do=methods" class="waves-effect"><i class="fa fa-newspaper-o fa-lg"></i> <span class="hide-menu">Metodlar</span></a></li>
-			<li><a href="index.php?do=appointment" class="waves-effect"><i class="fa fa-newspaper-o fa-lg"></i> <span class="hide-menu">Müayinə (Kontent)</span></a></li>
+			<li><a href="index.php?do=appointment" class="waves-effect"><i class="fa fa-newspaper-o fa-lg"></i> <span class="hide-menu">Sayt Kontent</span></a></li>
 			<li><a href="index.php?do=appointment_users"><i class="fa fa-envelope-o fa-lg"></i> <span class="hide-menu">Müayinə yazılanlar '.$appointment_new.'</span></a></li>
 			<li><a href="index.php?do=news" class="waves-effect"><i class="fa fa-newspaper-o fa-lg"></i> <span class="hide-menu">Xəbərlər</span></a></li>
 			<li><a href="index.php?do=letters"><i class="fa fa-envelope-o fa-lg"></i> <span class="hide-menu">Məktublar '.$letters_new.'</span></a></li>

@@ -10,9 +10,9 @@
 		$inc=1;
 		while($row=mysqli_fetch_assoc($sql))
 		{
-			echo '<div role="tabpanel" class="tab-pane" id="tab_lang'.$row["id"].'">';
+			echo '<div role="tabpanel" class="tab-pane lang-panel" id="tab_lang'.$row["id"].'">';
 			
-				echo '
+				echo '<h2 style="text-align: center; text-decoration: underline; font-weight: bold;">Dil üzrə dəyişən xanalar</h2>
 				<div class="form-group row">
 					<label for="example-text-input" class="col-md-2 col-form-label">Ad:</label>
 					<div class="col-md-10">

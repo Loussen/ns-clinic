@@ -88,7 +88,7 @@ jQuery(document).ready(function(){
 
     });
 
-    $('div.appointment-current-theme-style').on('submit','form#appointment-form',function(e){
+    $('div.form-wrap').on('submit','form#appointment-form',function(e){
         e.preventDefault();
 
         $('#appointment-form').css('opacity','0.3');

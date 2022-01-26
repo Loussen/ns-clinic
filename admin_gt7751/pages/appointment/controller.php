@@ -18,8 +18,9 @@ if(isset($_POST["submit_insert_update"]) && check_csrf_(safe($_POST["csrf_"]),$d
 		
 		$data_id=1;
 		$uploadedFile=fileUpload('image');
+		$uploadedFile2=fileUpload('image2');
 		if($uploadedFile!=''){
-			makeThumb($imageFolder.'/'.$uploadedFile,$imageFolder.'/thumb_'.$uploadedFile,300,200);
+//			makeThumb($imageFolder.'/'.$uploadedFile,$imageFolder.'/thumb_'.$uploadedFile,300,200);
 		}
 	}
 }

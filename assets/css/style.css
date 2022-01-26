@@ -3949,6 +3949,7 @@ button {
 }
 
 .appointment-form-two input,
+.appointment-form-two textarea,
 .appointment-form-two .nice-select {
 	background-color: var(--color-white);
 	border-radius: 35px;
@@ -4335,7 +4336,7 @@ button {
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	padding-left: 110px;
+	/*padding-left: 110px;*/
 	margin-top: 70px;
 }
 
@@ -10401,7 +10402,7 @@ button {
 }
 
 .template-footer.have-cta-boxed-one .footer-inner {
-	padding-top: 200px;
+	/*padding-top: 200px;*/
 }
 
 .template-footer.have-cta-boxes-two .cta-boxes-wrapper {
@@ -10451,3 +10452,8 @@ button {
 	color: var(--color-white);
 }
 /*# sourceMappingURL=style.css.map */
+
+.has-error
+{
+	border: 1px solid #E12454 !important;
+}

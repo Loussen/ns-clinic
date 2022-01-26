@@ -12,7 +12,7 @@ checkFolderIsset($imageFolder);
 
 if(isset($_POST["submit_insert_update"]) && check_csrf_(safe($_POST["csrf_"]),$do) )
 {
-	$datas_post=array('video_url','name','title');
+	$datas_post=array('video_url','name','text');
 	include "pages/__tools/check_post_datas.php";
 	
 //	if($$Name=='') $error='Ad daxil edilməyib. (Dil: '.$lang_name.')';

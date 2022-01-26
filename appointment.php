@@ -19,14 +19,10 @@ if($_POST)
 
     $appointment = intval($appointment);
 
-    if(strlen($name)<2)
-        $response = json_encode(array("code"=>0, "content" => "Error name", "err_param" => 'name'));
+    if(strlen($fullname)<2)
+        $response = json_encode(array("code"=>0, "content" => "Error name", "err_param" => 'fullname'));
     elseif(strlen($phone)<4 || !filter_var($phone, FILTER_SANITIZE_NUMBER_INT))
         $response = json_encode(array("code"=>0, "content" => "Error phone", "err_param" => 'phone'));
-    elseif(!$appointment_type > 1)
-        $response = json_encode(array("code"=>0, "content" => "Error appointment_type", "err_param" => 'appointment_type'));
-    elseif(!$checkup_type > 1)
-        $response = json_encode(array("code"=>0, "content" => "Error checkup_type", "err_param" => 'checkup_type'));
     elseif(strlen($message)<10)
             $response = json_encode(array("code"=>0, "content" => "Error mesagge", "err_param" => 'message'));
     else
@@ -64,7 +60,7 @@ if($_POST)
 //            $mail->Body    = $message;
             $date = date("Y-m-d H:i:s");
 
-            $insert = mysqli_query($db,"insert into `appointment_users` (`name`,`phone`,`subject`,`email`,`message`,`datetime`,`checkup_id`, `appointment_type`) values ('$name','$phone','$subject','$email','$message', '$date', '$checkup_type', '$appointment_type')");
+            $insert = mysqli_query($db,"insert into `appointment_users` (`name`,`phone`,`subject`,`email`,`message`,`datetime`) values ('$fullname','$phone','$subject','$email','$message', '$date')");
 
             if(/*$mail->send()*/ $insert)
             {

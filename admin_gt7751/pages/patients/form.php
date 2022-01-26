@@ -14,17 +14,18 @@
 			echo '<div role="tabpanel" class="tab-pane" id="tab_lang'.$row["id"].'">';
 			
 				echo '
+
 				<div class="form-group row">
-					<label for="example-text-input" class="col-md-2 col-form-label">Başlıq:</label>
+					<label for="example-text-input" class="col-md-2 col-form-label">Pasiyentin adı, soyadı:</label>
 					<div class="col-md-10">
-						<input name="title_'.decode_text($row["name"]).'" class="form-control" type="text" value="'.decode_text($information["title_".$row["name"]]).'" />
+						<input name="name_'.decode_text($row["name"]).'" class="form-control" type="text" value="'.decode_text($information["name_".$row["name"]]).'" />
 					</div>
 				</div>
 				
 				<div class="form-group row">
-					<label for="example-text-input" class="col-md-2 col-form-label">Pasiyent:</label>
+					<label for="example-text-input" class="col-md-2 col-form-label">Pasiyentin fikri:</label>
 					<div class="col-md-10">
-						<input name="name_'.decode_text($row["name"]).'" class="form-control" type="text" value="'.decode_text($information["name_".$row["name"]]).'" />
+						<textarea name="text_'.decode_text($row["name"]).'" class="form-control">'.decode_text($information["text_".$row["name"]]).'</textarea>
 					</div>
 				</div>
 				';
@@ -32,7 +33,7 @@
 			echo '</div>';
 		}
 		?>
-        <div class="form-group row">
+        <div class="form-group row hide">
             <label for="example-text-input" class="col-md-2 col-form-label">Video Url:</label>
             <div class="col-md-10">
                 <input name="video_url" class="form-control" type="text" value="<?php echo decode_text($information["video_url"])?>" />

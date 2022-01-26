@@ -21,20 +21,6 @@
 				</div>
 				
 				<div class="form-group row">
-					<label for="example-text-input" class="col-md-2 col-form-label">Qısa məlumat:</label>
-					<div class="col-md-10">
-						<textarea name="short_text_'.decode_text($row["name"]).'" class="form-control">'.decode_text($information["short_text_".$row["name"]]).'</textarea>
-					</div>
-				</div>
-				
-				<div class="form-group row">
-					<label for="example-text-input" class="col-md-2 col-form-label">Sloqan:</label>
-					<div class="col-md-10">
-						<textarea name="slogan_'.decode_text($row["name"]).'" class="form-control">'.decode_text($information["slogan_".$row["name"]]).'</textarea>
-					</div>
-				</div>
-				
-				<div class="form-group row">
 					<label for="example-text-input" class="col-md-2 col-form-label">Tam məlumat:</label>
 					<div class="col-md-10">
 						<textarea name="full_text_'.decode_text($row["name"]).'" class="form-control" id="editor'.$inc++.'">'.decode_text($information["full_text_".$row["name"]]).'</textarea>
@@ -53,7 +39,7 @@
 				$current_file=''; $column_nm='image';
 				if($information[$column_nm]!="") $current_file=createFileView($imageFolder,$information[$column_nm],1,$column_nm);
 				?>
-				<label for="example-text-input" class="col-md-2 col-form-label">Şəkil:</label>
+				<label for="example-text-input" class="col-md-2 col-form-label">Şəkil (470 x 670):</label>
 				<div class="col-md-10"><input name="<?=decode_text($column_nm)?>" type="file" /><?php echo $current_file?></div>
 			</div>
 			

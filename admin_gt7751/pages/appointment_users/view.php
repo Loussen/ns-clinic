@@ -28,12 +28,14 @@ $page_title="Müayinə yazılanlar";
 					<table class="table table-striped">
 						<thead>
 							<tr>
-								<th style="width:20%"><?php echo $input_allcheckbox?> Adı</th>
+								<th style="width:20%"><?php echo $input_allcheckbox?> Adı, Soyadı</th>
 								<th style="width:10%">Mobil</th>
 								<th style="width:10%">Email</th>
 								<th style="width:15%">Başlıq</th>
-								<th style="width:15%">Müayine növü</th>
-								<th style="width:15%">Seçim</th>
+								<th style="width:15%">Mətn</th>
+								<th style="width:15%">Tarix</th>
+<!--								<th style="width:15%">Müayine növü</th>-->
+<!--								<th style="width:15%">Seçim</th>-->
 								<th style="width:20%" class="print_hide">Alətlər</th>
 							</tr>
 						</thead>
@@ -58,8 +60,8 @@ $page_title="Müayinə yazılanlar";
 									<td>'.decode_text($row["phone"]).'</td>
 									<td>'.decode_text($row["email"]).'</td>
 									<td>'.decode_text($row["subject"]).'</td>
-									<td>'.($row["appointment_type"] == 1 ? "Həkim" : "Laboratoriya").'</td>
-									<td>'.$row_checkup["name"].'</td>
+									<td>'.decode_text($row["message"]).'</td>
+									<td>'.decode_text($row["datetime"]).'</td>
 									<td class="print_hide">'.rowButtons($addButtons,false).'</td>
 								</tr>';
 						}
