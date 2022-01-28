@@ -35,7 +35,7 @@ if(isset($_POST["submit_insert_update"]) && check_csrf_(safe($_POST["csrf_"]),$d
 					move_uploaded_file($image,$uploadImage);
 					
 					checkMaxSizeImage($uploadImage);
-					makeThumb($uploadImage,$imageFolder.'/thumb_'.$imageName,370,210);
+					makeThumb($uploadImage,$imageFolder.'/thumb_'.$imageName,370,370);
 				}
 				$count++;
 			}

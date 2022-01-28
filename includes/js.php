@@ -53,7 +53,7 @@ jQuery(document).ready(function(){
         });
     });
 
-    $(document).on('submit','form#contact_form',function(e){
+    $('div.form-wrap').on('submit','form#contact-form',function(e){
         e.preventDefault();
 
         $('#contact-form').css('opacity','0.3');
@@ -72,12 +72,12 @@ jQuery(document).ready(function(){
             success: function (data, textStatus, jqXHR) {
                 if(data.code==0)
                 {
-                    $('#contact_form').css('opacity','1');
+                    $('#contact-form').css('opacity','1');
                     $('[name="'+data.err_param+'"]').addClass('has-error');
                 }
                 else
                 {
-                    $("form#contact_form").css("display","none");
+                    $("form#contact-form").css("display","none");
                     $('div.success_contact').show();
                 }
             },

@@ -9,7 +9,8 @@ require_once "admin_gt7751/pages/__includes/config.php";
 //}
 
 if(!isset($_GET["get_lang_name"])){
-	$actual_link = "https://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
+
+	$actual_link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 	$new=str_replace($site,$site.'/az',$actual_link);
 	$new=str_replace('www.','',$new);
 	header("Location: $new");
@@ -44,9 +45,7 @@ require_once "includes/controller.php";
 
     <?php require_once "includes/top.php" ?>
 
-	<div class="main-content-area">
-        <?php require_once "includes/pages/".$do.".php"; ?>
-	</div>
+    <?php require_once "includes/pages/".$do.".php"; ?>
 
     <?php require_once "includes/footer.php" ?>
 

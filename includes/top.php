@@ -1,5 +1,5 @@
 <!--====== Start Template Header ======-->
-<header class="template-header sticky-header header-one absolute-header">
+<header class="template-header sticky-header header-one <?=$do=='home' ? 'absolute-header' : ''?>">
 	<div class="container-fluid container-1400">
 		<div class="header-navigation">
 			<div class="header-left">

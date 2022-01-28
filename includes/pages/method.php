@@ -8,13 +8,9 @@
 		<div class="row justify-content-center">
 			<div class="col-lg-12 order-lg-last">
 				<div class="service-details-wrapper">
-					<h2 class="service-title"><?=$info_service['name_'.$lang_name]?></h2>
-					<div class="service-thumbnail mb-50">
-						<img src="<?=SITE_PATH?>/images/services/<?=$info_service['image']?>" alt="<?=$info_service['name_'.$lang_name]?>">
-					</div>
-
+					<h2 class="service-title"><?=$info_method['name_'.$lang_name]?></h2>
 					<p>
-                        <?=decode_text($info_service['full_text_'.$lang_name],true)?>
+                        <?=decode_text($info_method['full_text_'.$lang_name],true)?>
 					</p>
 				</div>
 			</div>

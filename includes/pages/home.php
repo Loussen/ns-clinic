@@ -118,14 +118,14 @@
 			                <div class="icon">
 				                <img src="<?=SITE_PATH?>/images/methods/thumb_<?=$row['image']?>" alt="<?=$row['name_'.$lang_name]?>">
 			                </div>
-			                <h4 class="title"><a href="<?=$site?>/metod/<?=slugGenerator($row['name_'.$lang_name]).'-'.$row["id"]?>"><?=$row['name_'.$lang_name]?></a></h4>
+			                <h4 class="title"><a href="<?=$site?>/mualice-metodu/<?=slugGenerator($row['name_'.$lang_name]).'-'.$row["id"]?>"><?=$row['name_'.$lang_name]?></a></h4>
 			                <p>
                                 <?=substr_(decode_text($row['short_text_'.$lang_name]),0,50,true)?>
 			                </p>
 
 			                <div class="box-link-wrap">
 				                <span class="link-icon"><i class="far fa-plus"></i></span>
-				                <a class="box-link" href="<?=$site?>/metod/<?=slugGenerator($row['name_'.$lang_name]).'-'.$row["id"]?>"><?=$lang6?> <i class="far fa-plus"></i></a>
+				                <a class="box-link" href="<?=$site?>/mualice-metodu/<?=slugGenerator($row['name_'.$lang_name]).'-'.$row["id"]?>"><?=$lang6?> <i class="far fa-plus"></i></a>
 			                </div>
 		                </div>
 	                </div>

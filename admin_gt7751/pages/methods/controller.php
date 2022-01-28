@@ -25,7 +25,7 @@ if(isset($_POST["submit_insert_update"]) && check_csrf_(safe($_POST["csrf_"]),$d
 		if($edit>0) $data_id=$edit; else $data_id=mysqli_insert_id($db);
 		$uploadedFile=fileUpload('image');
 		if($uploadedFile!=''){
-			makeThumb($imageFolder.'/'.$uploadedFile,$imageFolder.'/thumb_'.$uploadedFile,340,225);
+			makeThumb($imageFolder.'/'.$uploadedFile,$imageFolder.'/thumb_'.$uploadedFile,100,90);
 		}
 	}
 }

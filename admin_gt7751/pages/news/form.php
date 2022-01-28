@@ -74,7 +74,7 @@
 		if($information[$column_nm]!="" && $edit>0) $current_file=createFileView($imageFolder,$information[$column_nm],$edit,$column_nm);
 		?>
 		<div class="form-group row">
-			<label for="example-text-input" class="col-md-2 col-form-label">Şəkil (700 x 425):</label>
+			<label for="example-text-input" class="col-md-2 col-form-label">Şəkil:</label>
 			<div class="col-md-10">
 				<input name="<?php echo decode_text($column_nm)?>" type="file" /> <?php echo $current_file?>
 			</div>

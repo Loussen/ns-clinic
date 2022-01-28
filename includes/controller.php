@@ -119,6 +119,24 @@ elseif($do=='services'){
     $siteKeywords=$info_description["keywords_".$lang_name];
     $siteImage=SITE_PATH.'/images/menus/'.$info_menu["image"];
 }
+elseif($do=='method'){
+    $id=intval($_GET["id"]);
+    $info_menu=mysqli_fetch_assoc(mysqli_query($db,"select * from menus where link='mualice-metodlari' and active=1 "));
+    $info_method=mysqli_fetch_assoc(mysqli_query($db,"select * from methods where id='$id' and active=1 "));
+    if(intval($info_menu["id"])==0 || intval($info_method['id'])==0) {header("Location: $site"); exit();}
+
+    $siteTitle=$info_menu["name_".$lang_name]." - ".$info_method["name_".$lang_name];
+    $siteDescription=substr_(decode_text($info_method["full_text_".$lang_name],true,true),0,250);
+    $siteKeywords=$info_description["keywords_".$lang_name];
+    $siteImage=SITE_PATH.'/images/methods/'.$info_method["image"];
+}
+elseif($do=='methods'){
+    $info_menu=mysqli_fetch_assoc(mysqli_query($db,"select * from menus where link='mualice-metodlari'"));
+    $siteTitle=$info_menu["name_".$lang_name];
+    $siteDescription=substr_(decode_text($info_menu["text_".$lang_name],true,true),0,250);
+    $siteKeywords=$info_description["keywords_".$lang_name];
+    $siteImage=SITE_PATH.'/images/menus/'.$info_menu["image"];
+}
 elseif($do=='genetik-test'){
     $id=intval($_GET["id"]);
     $info_menu=mysqli_fetch_assoc(mysqli_query($db,"select * from menus where link='genetik-testler' and active=1 "));
