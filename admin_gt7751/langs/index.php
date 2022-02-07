@@ -6,7 +6,7 @@ if(isset($_GET["change_lang_name"])){
 		if(isset($_SERVER['HTTP_REFERER'])) $referer=safe($_SERVER['HTTP_REFERER']); else $referer='';
         $referer=str_replace(array('/az/','/ru/','/en/','/ch/','/tr/'),'/'.$change_lang_name.'/',$referer);
 
-        if(strpos($referer,"fetalmerkeznsgenetics") === false)
+        if(strpos($referer,"nsagrimerkezi") === false)
         {
             header("Location: ".SITE_PATH);
         }

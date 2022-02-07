@@ -3,7 +3,7 @@
 <?php include "pages/__tools/add_new_link.php"; ?>
 <?php include "pages/__tools/lang_tabs.php"; ?>
 
-<form action="" method="post" enctype="multipart/form-data">
+<form action="" method="post" enctype="multipart/form-data" class="hide">
 	<div class="tab-content">
 		<div class="form-group row hide">
 			<label for="example-text-input" class="col-md-2 col-form-label">Əsas xəbərin İD-sini daxil edin:</label>

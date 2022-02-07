@@ -51,6 +51,18 @@
                                 }
                             }
 						?>
+						<li style="margin-left: 50px;">
+                            <?php
+                            if($lang_name=='az') $lname='AZ';
+							elseif($lang_name=='ru') $lname='RU';
+                            ?>
+
+							<a href="javascript:void(0);"><?= $lname ?></a>
+							<ul class="sub-menu">
+								<li><a href="<?=SITE_PATH?>/index.php?change_lang_name=az">AZ</a></li>
+								<li><a href="<?=SITE_PATH?>/index.php?change_lang_name=ru">RU</a></li>
+							</ul>
+						</li>
 					</ul>
 				</nav>
 			</div>

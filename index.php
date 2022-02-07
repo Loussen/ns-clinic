@@ -9,7 +9,6 @@ require_once "admin_gt7751/pages/__includes/config.php";
 //}
 
 if(!isset($_GET["get_lang_name"])){
-
 	$actual_link = "http://{$_SERVER['HTTP_HOST']}{$_SERVER['REQUEST_URI']}";
 	$new=str_replace($site,$site.'/az',$actual_link);
 	$new=str_replace('www.','',$new);

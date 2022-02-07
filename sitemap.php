@@ -26,17 +26,6 @@ while($row_menus = mysqli_fetch_assoc($sql_menus)) {
     echo '</url>' . PHP_EOL;
 }
 
-$sql_alboms = mysqli_query($db, "select * from photo_albums where active=1 order by id desc");
-
-while ($row_alboms = mysqli_fetch_assoc($sql_alboms)) {
-    echo '<url>' . PHP_EOL;
-    echo '<loc>'.$site.'/fotoqalereya/'.slugGenerator($row_alboms['name_'.$lang_name]).'-'.$row_alboms["id"].'/</loc>' . PHP_EOL;
-    echo '<lastmod>'.date('Y-m-dTH:i:sP', time()).'</lastmod>' . PHP_EOL;
-    echo '<changefreq>daily</changefreq>' . PHP_EOL;
-    echo '<priority>0.80</priority>' . PHP_EOL;
-    echo '</url>' . PHP_EOL;
-}
-
 $sql_services = mysqli_query($db, "select * from services where active=1 order by id desc");
 
 while ($row_services = mysqli_fetch_assoc($sql_services)) {
@@ -52,40 +41,7 @@ $sql_methods = mysqli_query($db,"select * from methods where active=1 order by i
 
 while ($row_methods = mysqli_fetch_assoc($sql_methods)) {
     echo '<url>' . PHP_EOL;
-    echo '<loc>'.$site.'/genetik-test/'.slugGenerator($row_methods['name_'.$lang_name]).'-'.$row_methods["id"].'/</loc>' . PHP_EOL;
-    echo '<lastmod>'.date('Y-m-dTH:i:sP', time()).'</lastmod>' . PHP_EOL;
-    echo '<changefreq>daily</changefreq>' . PHP_EOL;
-    echo '<priority>0.80</priority>' . PHP_EOL;
-    echo '</url>' . PHP_EOL;
-}
-
-$sql_departaments = mysqli_query($db,"select * from departments where active=1 order by id desc");
-
-while ($row_departaments = mysqli_fetch_assoc($sql_departaments)) {
-    echo '<url>' . PHP_EOL;
-    echo '<loc>'.$site.'/departament/'.slugGenerator($row_departaments['name_'.$lang_name]).'-'.$row_departaments["id"].'/</loc>' . PHP_EOL;
-    echo '<lastmod>'.date('Y-m-dTH:i:sP', time()).'</lastmod>' . PHP_EOL;
-    echo '<changefreq>daily</changefreq>' . PHP_EOL;
-    echo '<priority>0.80</priority>' . PHP_EOL;
-    echo '</url>' . PHP_EOL;
-}
-
-$sql_doctors = mysqli_query($db,"select * from doctors where active=1 order by id desc");
-
-while ($row_doctors = mysqli_fetch_assoc($sql_doctors)) {
-    echo '<url>' . PHP_EOL;
-    echo '<loc>'.$site.'/hekim/'.slugGenerator($row_doctors['name_'.$lang_name]).'-'.$row_doctors["id"].'/</loc>' . PHP_EOL;
-    echo '<lastmod>'.date('Y-m-dTH:i:sP', time()).'</lastmod>' . PHP_EOL;
-    echo '<changefreq>daily</changefreq>' . PHP_EOL;
-    echo '<priority>0.80</priority>' . PHP_EOL;
-    echo '</url>' . PHP_EOL;
-}
-
-$sql_methods = mysqli_query($db,"select * from methods where active=1 order by id desc");
-
-while ($row_methods = mysqli_fetch_assoc($sql_methods)) {
-    echo '<url>' . PHP_EOL;
-    echo '<loc>'.$site.'/genetik-test/'.slugGenerator($row_methods['name_'.$lang_name]).'-'.$row_methods["id"].'/</loc>' . PHP_EOL;
+    echo '<loc>'.$site.'/mualice-metodu/'.slugGenerator($row_methods['name_'.$lang_name]).'-'.$row_methods["id"].'/</loc>' . PHP_EOL;
     echo '<lastmod>'.date('Y-m-dTH:i:sP', time()).'</lastmod>' . PHP_EOL;
     echo '<changefreq>daily</changefreq>' . PHP_EOL;
     echo '<priority>0.80</priority>' . PHP_EOL;
